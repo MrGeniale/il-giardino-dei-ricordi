@@ -209,90 +209,99 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
 
         {/* 4. INTEGRATED BOOKING DATE & INQUIRY BAR */}
         <div className="mt-4 sm:mt-6 bg-[#faf8f5] rounded-2xl p-5 sm:p-6 border border-[#ece4d6]">
-          <form onSubmit={handleQuickInquiry} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
-            <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#685e54] mb-1.5 flex items-center gap-1.5">
-                <Calendar className="w-3.5 h-3.5 text-[#2d4a3e]" />
-                <span>{isEn ? 'Check-in Date' : 'Data di Arrivo'}</span>
-              </label>
-              <input
-                type="date"
-                value={checkIn}
-                onChange={(e) => setCheckIn(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#2d4a3e] focus:outline-hidden"
-              />
+          <form onSubmit={handleQuickInquiry} className="space-y-4">
+            {/* Top row: Check-in, Check-out, Guests */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#685e54] mb-1.5 flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5 text-[#2d4a3e]" />
+                  <span>{isEn ? 'Check-in Date' : 'Data di Arrivo'}</span>
+                </label>
+                <input
+                  type="date"
+                  value={checkIn}
+                  onChange={(e) => setCheckIn(e.target.value)}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#2d4a3e] focus:outline-hidden"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#685e54] mb-1.5 flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5 text-[#2d4a3e]" />
+                  <span>{isEn ? 'Check-out Date' : 'Data di Partenza'}</span>
+                </label>
+                <input
+                  type="date"
+                  value={checkOut}
+                  onChange={(e) => setCheckOut(e.target.value)}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#2d4a3e] focus:outline-hidden"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#685e54] mb-1.5 flex items-center gap-1.5">
+                  <Users className="w-3.5 h-3.5 text-[#2d4a3e]" />
+                  <span>{isEn ? 'Guests' : 'Ospiti'}</span>
+                </label>
+                <select
+                  value={guests}
+                  onChange={(e) => setGuests(e.target.value)}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#2d4a3e] focus:outline-hidden"
+                >
+                  <option value={isEn ? "1 Guest" : "1 Ospite"}>{isEn ? '1 Guest' : '1 Ospite'}</option>
+                  <option value={isEn ? "2 Guests" : "2 Ospiti"}>{isEn ? '2 Guests' : '2 Ospiti'}</option>
+                  <option value={isEn ? "3 Guests" : "3 Ospiti"}>{isEn ? '3 Guests' : '3 Ospiti'}</option>
+                  <option value={isEn ? "4 Guests" : "4 Ospiti"}>{isEn ? '4 Guests' : '4 Ospiti'}</option>
+                </select>
+              </div>
             </div>
 
-            <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#685e54] mb-1.5 flex items-center gap-1.5">
-                <Calendar className="w-3.5 h-3.5 text-[#2d4a3e]" />
-                <span>{isEn ? 'Check-out Date' : 'Data di Partenza'}</span>
-              </label>
-              <input
-                type="date"
-                value={checkOut}
-                onChange={(e) => setCheckOut(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#2d4a3e] focus:outline-hidden"
-              />
-            </div>
+            {/* Extra Options & CTA Action Bar: Extras situated ABOVE/before the WhatsApp button */}
+            <div className="pt-3 border-t border-[#ece4d6] flex flex-col md:flex-row md:items-center justify-between gap-4">
+              
+              {/* Independent Extra Options */}
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#71685e]">
+                  {isEn ? 'Options on request:' : 'Opzioni su richiesta:'}
+                </span>
 
-            <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#685e54] mb-1.5 flex items-center gap-1.5">
-                <Users className="w-3.5 h-3.5 text-[#2d4a3e]" />
-                <span>{isEn ? 'Guests' : 'Ospiti'}</span>
-              </label>
-              <select
-                value={guests}
-                onChange={(e) => setGuests(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#2d4a3e] focus:outline-hidden"
-              >
-                <option value={isEn ? "1 Guest" : "1 Ospite"}>{isEn ? '1 Guest' : '1 Ospite'}</option>
-                <option value={isEn ? "2 Guests" : "2 Ospiti"}>{isEn ? '2 Guests' : '2 Ospiti'}</option>
-                <option value={isEn ? "3 Guests" : "3 Ospiti"}>{isEn ? '3 Guests' : '3 Ospiti'}</option>
-                <option value={isEn ? "4 Guests" : "4 Ospiti"}>{isEn ? '4 Guests' : '4 Ospiti'}</option>
-              </select>
-            </div>
+                <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-[#2b241e] font-medium hover:text-[#1e382b] select-none">
+                  <input
+                    type="checkbox"
+                    checked={needCot}
+                    onChange={(e) => setNeedCot(e.target.checked)}
+                    className="w-4 h-4 rounded text-[#2d4a3e] border-[#c8beaf] focus:ring-[#2d4a3e] accent-[#2d4a3e] cursor-pointer"
+                  />
+                  <Baby className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                  <span>{isEn ? 'Baby cot (0-3 yrs)' : 'Culla bebè (0-3 anni)'}</span>
+                </label>
 
-            <div>
-              <button
-                type="submit"
-                className="cursor-pointer w-full py-3 px-5 rounded-xl bg-[#1e382b] hover:bg-[#152a20] text-white text-xs sm:text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
-              >
-                <MessageCircle className="w-4 h-4 text-emerald-400" />
-                <span>{isEn ? 'Inquire via WhatsApp' : 'Verifica su WhatsApp'}</span>
-                <ChevronRight className="w-4 h-4 text-[#e6cfab]" />
-              </button>
+                <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-[#2b241e] font-medium hover:text-[#1e382b] select-none">
+                  <input
+                    type="checkbox"
+                    checked={needExtraBed}
+                    onChange={(e) => setNeedExtraBed(e.target.checked)}
+                    className="w-4 h-4 rounded text-[#2d4a3e] border-[#c8beaf] focus:ring-[#2d4a3e] accent-[#2d4a3e] cursor-pointer"
+                  />
+                  <Bed className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
+                  <span>{isEn ? 'Extra single bed' : 'Letto singolo extra'}</span>
+                </label>
+              </div>
+
+              {/* Submit CTA Button */}
+              <div className="w-full md:w-auto shrink-0">
+                <button
+                  type="submit"
+                  className="cursor-pointer w-full md:w-auto py-3 px-6 rounded-xl bg-[#1e382b] hover:bg-[#152a20] text-white text-xs sm:text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 shadow-sm hover:shadow-md"
+                >
+                  <MessageCircle className="w-4 h-4 text-emerald-400" />
+                  <span>{isEn ? 'Inquire via WhatsApp' : 'Verifica su WhatsApp'}</span>
+                  <ChevronRight className="w-4 h-4 text-[#e6cfab]" />
+                </button>
+              </div>
+
             </div>
           </form>
-
-          {/* Independent Extra Options for Baby Cot & Extra Single Bed */}
-          <div className="mt-3.5 pt-3 border-t border-[#ece4d6] flex flex-wrap items-center gap-x-6 gap-y-2">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#71685e]">
-              {isEn ? 'Optional Extras:' : 'Opzioni Extra:'}
-            </span>
-
-            <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-[#2b241e] font-medium hover:text-[#1e382b] select-none">
-              <input
-                type="checkbox"
-                checked={needCot}
-                onChange={(e) => setNeedCot(e.target.checked)}
-                className="w-4 h-4 rounded text-[#2d4a3e] border-[#c8beaf] focus:ring-[#2d4a3e] accent-[#2d4a3e] cursor-pointer"
-              />
-              <Baby className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-              <span>{isEn ? 'Baby cot / crib (0-3 yrs free)' : 'Culla bebè (0-3 anni gratis)'}</span>
-            </label>
-
-            <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-[#2b241e] font-medium hover:text-[#1e382b] select-none">
-              <input
-                type="checkbox"
-                checked={needExtraBed}
-                onChange={(e) => setNeedExtraBed(e.target.checked)}
-                className="w-4 h-4 rounded text-[#2d4a3e] border-[#c8beaf] focus:ring-[#2d4a3e] accent-[#2d4a3e] cursor-pointer"
-              />
-              <Bed className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
-              <span>{isEn ? 'Extra single bed' : 'Letto singolo extra'}</span>
-            </label>
-          </div>
 
           <div className="flex flex-wrap items-center justify-between gap-3 mt-4 pt-3.5 border-t border-[#e8dfd2] text-xs text-[#71685e]">
             <div className="flex items-center gap-1.5">
