@@ -60,8 +60,8 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
         
         {/* 1. GIGANTIC ARCHITECTURAL HEADLINE (Directly matching Wix template 'Consulente Immobiliare') */}
         <div className="mb-4 sm:mb-6">
-          <div className="flex flex-wrap items-center justify-between gap-2 mb-2 sm:mb-3">
-            <span className="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-[#71685e] font-sans font-medium">
+          <div className="flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+            <span className="text-[10px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.28em] text-[#71685e] font-sans font-medium">
               {isEn ? 'Alberobello • Exclusive Holiday Home' : 'Alberobello • Locazione Turistica Esclusiva'}
             </span>
 
@@ -71,13 +71,13 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
             </div>
           </div>
 
-          <h1 className="font-display text-[8.5vw] sm:text-[7.5vw] lg:text-[6.8vw] font-medium text-[#26201b] leading-[0.95] tracking-tight whitespace-nowrap overflow-hidden text-ellipsis">
+          <h1 className="font-display text-[2.2rem] xs:text-[2.6rem] sm:text-[7.5vw] lg:text-[6.8vw] font-medium text-[#26201b] leading-[1.02] sm:leading-[0.95] tracking-tight break-words sm:whitespace-nowrap">
             Il Giardino dei Ricordi
           </h1>
         </div>
 
         {/* 2. WIDE PANORAMIC ARCHITECTURAL HERO IMAGE BANNER (Exact layout from user screenshot) */}
-        <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[21/10] max-h-[72vh] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-[#0f1d16] group">
+        <div className="relative w-full aspect-[4/3] xs:aspect-[16/11] sm:aspect-[16/9] lg:aspect-[21/10] min-h-[310px] sm:min-h-0 max-h-[72vh] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-[#0f1d16] group">
           
           {/* Photos transition */}
           {slides.map((slide, idx) => (
@@ -96,30 +96,30 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
           ))}
 
           {/* Subtle cinematic gradient overlay at the bottom */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent z-20 pointer-events-none" />
 
           {/* Bottom Overlay Content inside the Photo Banner */}
-          <div className="absolute inset-x-0 bottom-0 z-30 p-4 sm:p-6 lg:p-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div className="absolute inset-x-0 bottom-0 z-30 p-3.5 sm:p-6 lg:p-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4">
             
             {/* Left: Tagline & Active slide caption */}
             <div className="text-white max-w-xl">
-              <span className="inline-block text-[10px] sm:text-xs uppercase tracking-[0.24em] text-[#e8d5ba] font-semibold mb-1">
+              <span className="inline-block text-[9px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.24em] text-[#e8d5ba] font-semibold mb-0.5 sm:mb-1">
                 {slides[activePhoto].subtitle}
               </span>
-              <h2 className="font-heading text-xl sm:text-3xl text-white font-normal drop-shadow-md">
+              <h2 className="font-heading text-lg xs:text-xl sm:text-3xl text-white font-normal drop-shadow-md leading-snug">
                 {slides[activePhoto].title}
               </h2>
             </div>
 
             {/* Center / Slide Indicators pill (as seen in Wix template screenshot) */}
-            <div className="flex items-center gap-2 bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 self-start sm:self-end">
+            <div className="flex items-center gap-1.5 sm:gap-2 bg-black/40 backdrop-blur-md px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-white/20 self-start sm:self-end">
               {slides.map((_, i) => (
                 <button
                   key={i}
                   type="button"
                   onClick={() => setActivePhoto(i)}
                   className={`h-1.5 transition-all duration-300 rounded-full cursor-pointer ${
-                    i === activePhoto ? 'w-7 bg-[#c8a97e]' : 'w-2 bg-white/40 hover:bg-white/80'
+                    i === activePhoto ? 'w-6 sm:w-7 bg-[#c8a97e]' : 'w-2 bg-white/40 hover:bg-white/80'
                   }`}
                   aria-label={`Slide ${i + 1}`}
                 />
@@ -131,7 +131,7 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
               <button
                 type="button"
                 onClick={onOpenBooking}
-                className="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#2d4a3e] hover:bg-[#1e382b] text-white text-xs uppercase tracking-[0.18em] font-semibold transition-all duration-300 shadow-xl hover:scale-102 border border-white/10"
+                className="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl bg-[#2d4a3e] hover:bg-[#1e382b] text-white text-xs uppercase tracking-[0.16em] sm:tracking-[0.18em] font-semibold transition-all duration-300 shadow-xl hover:scale-102 border border-white/10"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#e6cfab]" />
                 <span>{isEn ? 'Check Availability' : 'Richiedi Disponibilità'}</span>
@@ -143,59 +143,59 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
         </div>
 
         {/* 3. PROPERTY SPECIFICATIONS STRIP (Architectural Clean Cards) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-6 sm:mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4 mt-5 sm:mt-8">
           
-          <div className="bg-[#faf8f5] p-4 sm:p-5 rounded-2xl border border-[#ece4d6] flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-emerald-700 shrink-0 shadow-2xs">
-              <Car className="w-5 h-5" />
+          <div className="bg-[#faf8f5] p-3 sm:p-5 rounded-xl sm:rounded-2xl border border-[#ece4d6] flex items-center gap-2.5 sm:gap-3.5">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-emerald-700 shrink-0 shadow-2xs">
+              <Car className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
-            <div>
-              <span className="text-xs sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block">
+            <div className="min-w-0">
+              <span className="text-[11px] sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block truncate">
                 {isEn ? '3 Cars Free' : '3 Posti Auto'}
               </span>
-              <span className="text-[11px] sm:text-xs text-[#71685e]">
+              <span className="text-[10px] sm:text-xs text-[#71685e] block leading-tight">
                 {isEn ? 'Free private parking' : 'Gratuito nel viale privato'}
               </span>
             </div>
           </div>
 
-          <div className="bg-[#faf8f5] p-4 sm:p-5 rounded-2xl border border-[#ece4d6] flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-[#c8a97e] shrink-0 shadow-2xs">
-              <MapPin className="w-5 h-5" />
+          <div className="bg-[#faf8f5] p-3 sm:p-5 rounded-xl sm:rounded-2xl border border-[#ece4d6] flex items-center gap-2.5 sm:gap-3.5">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-[#c8a97e] shrink-0 shadow-2xs">
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
-            <div>
-              <span className="text-xs sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block">
+            <div className="min-w-0">
+              <span className="text-[11px] sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block truncate">
                 700 Metri
               </span>
-              <span className="text-[11px] sm:text-xs text-[#71685e]">
+              <span className="text-[10px] sm:text-xs text-[#71685e] block leading-tight">
                 {isEn ? 'Walk to historic Trulli' : 'A piedi dai Trulli storici'}
               </span>
             </div>
           </div>
 
-          <div className="bg-[#faf8f5] p-4 sm:p-5 rounded-2xl border border-[#ece4d6] flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-emerald-700 shrink-0 shadow-2xs">
-              <Bed className="w-5 h-5" />
+          <div className="bg-[#faf8f5] p-3 sm:p-5 rounded-xl sm:rounded-2xl border border-[#ece4d6] flex items-center gap-2.5 sm:gap-3.5">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-emerald-700 shrink-0 shadow-2xs">
+              <Bed className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
-            <div>
-              <span className="text-xs sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block">
+            <div className="min-w-0">
+              <span className="text-[11px] sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block truncate">
                 {isEn ? '4+1 Guests' : '4+1 Posti Letto'}
               </span>
-              <span className="text-[11px] sm:text-xs text-[#71685e]">
-                {isEn ? '2 Bedrooms & 2 Bathrooms' : '2 Camere e 2 Bagni completi'}
+              <span className="text-[10px] sm:text-xs text-[#71685e] block leading-tight">
+                {isEn ? '2 Bed & 2 Bath' : '2 Camere e 2 Bagni'}
               </span>
             </div>
           </div>
 
-          <div className="bg-[#faf8f5] p-4 sm:p-5 rounded-2xl border border-[#ece4d6] flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-emerald-700 shrink-0 shadow-2xs">
-              <Trees className="w-5 h-5" />
+          <div className="bg-[#faf8f5] p-3 sm:p-5 rounded-xl sm:rounded-2xl border border-[#ece4d6] flex items-center gap-2.5 sm:gap-3.5">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-emerald-700 shrink-0 shadow-2xs">
+              <Trees className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
-            <div>
-              <span className="text-xs sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block">
+            <div className="min-w-0">
+              <span className="text-[11px] sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block truncate">
                 {isEn ? 'Private Garden' : 'Giardino Privato'}
               </span>
-              <span className="text-[11px] sm:text-xs text-[#71685e]">
+              <span className="text-[10px] sm:text-xs text-[#71685e] block leading-tight">
                 {isEn ? 'With ancient fig tree' : 'Con albero di fico secolare'}
               </span>
             </div>

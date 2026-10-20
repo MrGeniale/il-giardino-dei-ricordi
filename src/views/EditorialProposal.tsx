@@ -40,46 +40,47 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
       </div>
 
       {/* 2. Il Manifesto della Dimora (Asymmetric Sanctuary Manifesto) */}
-      <section id="about" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <section id="about" className="py-16 sm:py-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           
-          {/* Colonna Sinistra: Grande Foto Portrait Verticale con cornice sobria */}
+          {/* Colonna Sinistra: Grande Foto con cornice sobria e nota d'autore */}
           <div className="lg:col-span-5 relative">
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/3] sm:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/images/ndf_7960.jpg"
                 alt={isEn ? "Private entrance of Il Giardino dei Ricordi" : "Ingresso e cortile privato de Il Giardino dei Ricordi"}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 text-white text-xs tracking-wider uppercase">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-white text-xs tracking-wider uppercase">
                 <span className="font-semibold text-[#f7e0bc]">Via Capitano V. di Mola 35</span>
-                <span className="block text-[11px] text-white/80 font-light mt-0.5">
+                <span className="block text-[10px] sm:text-[11px] text-white/80 font-light mt-0.5">
                   {isEn ? 'Alberobello • Historic Center' : 'Alberobello • Centro Storico'}
                 </span>
               </div>
             </div>
-            {/* Nota d'autore discreta */}
-            <div className="absolute -bottom-6 -right-6 bg-white p-5 rounded-2xl border border-[#e8dfd2] shadow-xl max-w-[220px] hidden sm:block">
+
+            {/* Nota d'autore: Su desktop fluttuante, su mobile card elegante sotto la foto */}
+            <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-6 bg-white p-4 sm:p-5 rounded-2xl border border-[#e8dfd2] shadow-xl sm:max-w-[220px]">
               <span className="text-[10px] uppercase tracking-widest text-[#9f3757] font-bold block mb-1">
                 {isEn ? 'Hospitality' : "L'Accoglienza"}
               </span>
-              <p className="font-serif italic text-sm text-[#1e3329] leading-snug">
+              <p className="font-serif italic text-xs sm:text-sm text-[#1e3329] leading-snug">
                 {isEn ? '"Making you feel part of a cherished memory amidst the colors of Puglia."' : '"Farvi sentire parte di una memoria felice tra i colori di Puglia."'}
               </p>
-              <span className="text-[10px] text-[#7d7468] block mt-1.5 font-medium">
+              <span className="text-[10px] text-[#7d7468] block mt-1 font-medium">
                 — Marilena Liuzzi
               </span>
             </div>
           </div>
 
           {/* Colonna Destra: Grande Tipografia Editoriale e Paragrafi che Respirano */}
-          <div className="lg:col-span-7 flex flex-col justify-center lg:pl-6">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#9f3757] font-bold mb-3 block">
+          <div className="lg:col-span-7 flex flex-col justify-center lg:pl-6 pt-4 lg:pt-0">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#9f3757] font-bold mb-2 sm:mb-3 block">
               {isEn ? 'The Rare Serenity of Alberobello' : 'La Quiete Rara di Alberobello'}
             </span>
             
-            <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl text-[#172e24] leading-[1.12] mb-8 font-light">
+            <h2 className="font-heading text-2xl xs:text-3xl sm:text-5xl lg:text-6xl text-[#172e24] leading-[1.12] mb-5 sm:mb-8 font-light">
               {isEn ? (
                 <>The privilege of living central, with the breath of a <span className="font-serif italic font-normal text-[#2a4f3d]">true private oasis</span>.</>
               ) : (
@@ -87,7 +88,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
               )}
             </h2>
 
-            <div className="space-y-5 text-base sm:text-lg text-[#524b43] font-light leading-relaxed font-sans mb-10">
+            <div className="space-y-4 sm:space-y-5 text-sm sm:text-lg text-[#524b43] font-light leading-relaxed font-sans mb-8 sm:mb-10">
               {isEn ? (
                 <>
                   <p>
@@ -110,36 +111,36 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
             </div>
 
             {/* Dati essenziali in linea sobria */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-[#e2d8ca]">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-5 sm:pt-6 border-t border-[#e2d8ca]">
               <div>
-                <span className="font-heading text-3xl sm:text-4xl text-[#1e3329] font-medium block">
+                <span className="font-heading text-2xl sm:text-4xl text-[#1e3329] font-medium block">
                   700 m
                 </span>
-                <span className="text-xs text-[#786f66] uppercase tracking-wider block mt-1">
+                <span className="text-[11px] sm:text-xs text-[#786f66] uppercase tracking-wider block mt-0.5 sm:mt-1">
                   {isEn ? 'Walk to historic Trulli' : 'Dai Trulli storici'}
                 </span>
               </div>
               <div>
-                <span className="font-heading text-3xl sm:text-4xl text-[#1e3329] font-medium block">
+                <span className="font-heading text-2xl sm:text-4xl text-[#1e3329] font-medium block">
                   {isEn ? '3 Cars' : '3 Auto'}
                 </span>
-                <span className="text-xs text-[#786f66] uppercase tracking-wider block mt-1">
+                <span className="text-[11px] sm:text-xs text-[#786f66] uppercase tracking-wider block mt-0.5 sm:mt-1">
                   {isEn ? 'Free private parking' : 'Parcheggio gratuito'}
                 </span>
               </div>
               <div>
-                <span className="font-heading text-3xl sm:text-4xl text-[#1e3329] font-medium block">
+                <span className="font-heading text-2xl sm:text-4xl text-[#1e3329] font-medium block">
                   4+1
                 </span>
-                <span className="text-xs text-[#786f66] uppercase tracking-wider block mt-1">
+                <span className="text-[11px] sm:text-xs text-[#786f66] uppercase tracking-wider block mt-0.5 sm:mt-1">
                   {isEn ? 'Guests & Baby cot' : 'Ospiti & Culla bebè'}
                 </span>
               </div>
               <div>
-                <span className="font-heading text-3xl sm:text-4xl text-[#1e3329] font-medium block">
+                <span className="font-heading text-2xl sm:text-4xl text-[#1e3329] font-medium block">
                   9.6
                 </span>
-                <span className="text-xs text-[#786f66] uppercase tracking-wider block mt-1">
+                <span className="text-[11px] sm:text-xs text-[#786f66] uppercase tracking-wider block mt-0.5 sm:mt-1">
                   {isEn ? 'Booking.com Score' : 'Voto Booking'}
                 </span>
               </div>
@@ -151,25 +152,25 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
       </section>
 
       {/* 3. Lookbook Visuale delle Camere & Spazi */}
-      <section id="spaces" className="py-24 bg-[#f4eee3] px-4 sm:px-6 lg:px-12 border-y border-[#e5dcce]">
+      <section id="spaces" className="py-16 sm:py-24 bg-[#f4eee3] px-4 sm:px-6 lg:px-12 border-y border-[#e5dcce]">
         <div className="max-w-7xl mx-auto">
           
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-3 sm:gap-4">
             <div>
               <span className="text-xs uppercase tracking-[0.25em] text-[#9f3757] font-bold block mb-2">
                 {isEn ? 'Interior Spaces • Lookbook' : 'Gli Spazi Interni • Lookbook'}
               </span>
-              <h2 className="font-heading text-3xl sm:text-5xl text-[#172e24] font-light">
+              <h2 className="font-heading text-2xl xs:text-3xl sm:text-5xl text-[#172e24] font-light">
                 {isEn ? 'Spacious rooms, independence & complete privacy' : 'Camere ampie, indipendenza e privacy totale'}
               </h2>
             </div>
-            <p className="text-sm text-[#665e55] max-w-md font-sans">
+            <p className="text-xs sm:text-sm text-[#665e55] max-w-md font-sans">
               {isEn ? 'Two separate double bedrooms, two full bathrooms, and fully equipped kitchen for couples, friends, or families.' : 'Due camere matrimoniali separate, doppi servizi completi e cucina attrezzata per un soggiorno rilassante in coppia, con amici o in famiglia.'}
             </p>
           </div>
 
           {/* Lookbook: grandi blocchi fotografici alternati */}
-          <div className="space-y-20 sm:space-y-28">
+          <div className="space-y-12 sm:space-y-28">
             
             {/* Blocco 1: Camera Padronale */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
@@ -278,42 +279,42 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
       </section>
 
       {/* 4. Il Giardino e il Fico Secolare */}
-      <section id="garden" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <section id="garden" className="py-16 sm:py-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           <div className="lg:col-span-6">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#9f3757] font-bold block mb-3">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#9f3757] font-bold block mb-2 sm:mb-3">
               {isEn ? 'The Soul of the Place' : "L'Anima del Luogo"}
             </span>
-            <h2 className="font-heading text-3xl sm:text-5xl text-[#172e24] leading-tight mb-6 font-light">
+            <h2 className="font-heading text-2xl xs:text-3xl sm:text-5xl text-[#172e24] leading-tight mb-4 sm:mb-6 font-light">
               {isEn ? (
                 <>The private garden that gives name to your <span className="font-serif italic font-normal text-[#2a4f3d]">dearest memories</span></>
               ) : (
                 <>Il Giardino privato che dà il nome ai tuoi <span className="font-serif italic font-normal text-[#2a4f3d]">ricordi migliori</span></>
               )}
             </h2>
-            <p className="text-base sm:text-lg text-[#524b43] font-light leading-relaxed mb-6 font-sans">
+            <p className="text-sm sm:text-lg text-[#524b43] font-light leading-relaxed mb-4 sm:mb-6 font-sans">
               {isEn ? 'An exclusive outdoor haven, fully fenced and protected from outside views. Crowned by a majestic ancient fig tree creating a natural canopy of cooling green shade for sunny afternoons.' : 'Uno spazio aperto esclusivo, interamente recintato e protetto dalla vista esterna. Qui troneggia un maestoso albero di fico che crea una naturale cattedrale d\'ombra verde per i pomeriggi estivi.'}
             </p>
-            <p className="text-base sm:text-lg text-[#524b43] font-light leading-relaxed mb-8 font-sans">
+            <p className="text-sm sm:text-lg text-[#524b43] font-light leading-relaxed mb-6 sm:mb-8 font-sans">
               {isEn ? 'At dusk, hanging fairy lights cast a magical glow: ideal for a glass of Primitivo or Verdeca, local taralli, and the distant silhouettes of Alberobello\'s stone cones.' : 'All\'imbrunire le lucine sospese creano un\'atmosfera sospesa nel tempo: perfetto per un calice di Primitivo o Verdeca, taralli e la vista in lontananza dei coni in pietra di Alberobello.'}
             </p>
 
-            <div className="flex items-center gap-6 pt-4 border-t border-[#e2d8ca]">
+            <div className="flex items-center gap-4 sm:gap-6 pt-4 border-t border-[#e2d8ca]">
               <div>
-                <span className="font-heading text-2xl text-[#1e3329] font-medium block">
+                <span className="font-heading text-xl sm:text-2xl text-[#1e3329] font-medium block">
                   {isEn ? 'Outdoor Table' : 'Tavolo Esterno'}
                 </span>
-                <span className="text-xs text-[#7d7468]">
+                <span className="text-[11px] sm:text-xs text-[#7d7468]">
                   {isEn ? 'For al fresco dining & breakfasts' : 'Per pranzi e colazioni all\'aperto'}
                 </span>
               </div>
-              <div className="w-px h-10 bg-[#e2d8ca]" />
+              <div className="w-px h-8 sm:h-10 bg-[#e2d8ca]" />
               <div>
-                <span className="font-heading text-2xl text-[#1e3329] font-medium block">
+                <span className="font-heading text-xl sm:text-2xl text-[#1e3329] font-medium block">
                   {isEn ? 'Solarium & Flora' : 'Solarium & Fiori'}
                 </span>
-                <span className="text-xs text-[#7d7468]">
+                <span className="text-[11px] sm:text-xs text-[#7d7468]">
                   {isEn ? 'Bougainvillea & pure serenity' : 'Bougainvillea e pace assoluta'}
                 </span>
               </div>
@@ -321,7 +322,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
           </div>
 
           <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src="/images/ndf_8231.jpg"
                 alt={isEn ? "Garden at night with fairy lights" : "Il Giardino di sera con le lucine accese"}
@@ -342,20 +343,20 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
       </section>
 
       {/* 5. Il Parcheggio Privato: Una Rarità ad Alberobello */}
-      <section className="bg-[#172e24] text-white py-20 sm:py-28 px-4 sm:px-6 lg:px-12 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <section className="bg-[#172e24] text-white py-16 sm:py-28 px-4 sm:px-6 lg:px-12 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           <div className="lg:col-span-7">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#d8c29d] font-bold block mb-3">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#d8c29d] font-bold block mb-2 sm:mb-3">
               {isEn ? 'An Invaluable Asset' : 'Un Vantaggio Inestimabile'}
             </span>
-            <h2 className="font-heading text-3xl sm:text-5xl text-white font-light leading-tight mb-6">
+            <h2 className="font-heading text-2xl xs:text-3xl sm:text-5xl text-white font-light leading-tight mb-4 sm:mb-6">
               {isEn ? 'Up to 3 free parking spaces inside the gated private driveway' : 'Fino a 3 posti auto gratuiti nel viale privato custodito'}
             </h2>
-            <p className="text-base sm:text-lg text-[#ded8cb] font-light leading-relaxed mb-6 font-sans max-w-2xl">
+            <p className="text-sm sm:text-lg text-[#ded8cb] font-light leading-relaxed mb-4 sm:mb-6 font-sans max-w-2xl">
               {isEn ? 'Anyone who has visited Alberobello knows the parking ordeal: costly paid parking lots (€25-30+ per day), hourly meters, and congested traffic.' : 'Chiunque abbia visitato Alberobello conosce la complessità del parcheggio: stalli a pagamento costosi (oltre 25-30€ al giorno), tariffe a ore e traffico congestionato.'}
             </p>
-            <p className="text-base sm:text-lg text-[#ded8cb] font-light leading-relaxed font-sans max-w-2xl">
+            <p className="text-sm sm:text-lg text-[#ded8cb] font-light leading-relaxed font-sans max-w-2xl">
               {isEn ? 'At Il Giardino dei Ricordi, drive right in, pass through the private gate, and park up to 3 vehicles safely on site. From that moment, leave your car behind and explore all of Alberobello on foot in complete serenity.' : <>A <strong>Il Giardino dei Ricordi</strong> arrivi in auto, varchi il cancello privato e parcheggi fino a 3 veicoli all'interno della proprietà. Da quel momento la macchina non ti serve più: vivi tutta Alberobello a piedi in totale serenità.</>}
             </p>
           </div>
@@ -367,8 +368,8 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                 alt={isEn ? "Private gated driveway with parking" : "Viale carrabile privato con posti auto"}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-5">
-                <span className="text-xs uppercase tracking-wider text-[#f7e0bc] font-medium">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4 sm:p-5">
+                <span className="text-[11px] sm:text-xs uppercase tracking-wider text-[#f7e0bc] font-medium">
                   {isEn ? 'Exclusive private driveway access' : "Viale carrabile d'accesso esclusivo"}
                 </span>
               </div>
@@ -379,20 +380,20 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
       </section>
 
       {/* 6. Distanze a Piedi & Mappa Territorio */}
-      <section id="location" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
-        <div className="max-w-3xl mb-16">
+      <section id="location" className="py-16 sm:py-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+        <div className="max-w-3xl mb-10 sm:mb-16">
           <span className="text-xs uppercase tracking-[0.25em] text-[#9f3757] font-bold block mb-2">
             {isEn ? 'Privileged Location' : 'Posizione Privilegiata'}
           </span>
-          <h2 className="font-heading text-3xl sm:text-5xl text-[#172e24] font-light">
+          <h2 className="font-heading text-2xl xs:text-3xl sm:text-5xl text-[#172e24] font-light">
             {isEn ? 'In the heart of Alberobello, steps from the historic Trulli cones' : 'Nel cuore di Alberobello, a pochi passi dai coni storici'}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           
-          <div className="lg:col-span-6 space-y-6">
-            <p className="text-base text-[#524b43] font-light leading-relaxed font-sans">
+          <div className="lg:col-span-6 space-y-5 sm:space-y-6">
+            <p className="text-sm sm:text-base text-[#524b43] font-light leading-relaxed font-sans">
               {isEn ? 'Located in Via Capitano V. di Mola 35, in a peaceful residential neighborhood, within comfortable walking distance from all major UNESCO sights:' : 'La struttura si trova in Via Capitano V. di Mola 35, in un contesto residenziale tranquillo e silenzioso, a breve distanza a piedi da tutte le principali meraviglie UNESCO di Alberobello:'}
             </p>
 
@@ -405,11 +406,11 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                 { name: isEn ? "Locorotondo & Martina Franca" : "Locorotondo & Martina Franca", dist: "9 - 14 km", time: isEn ? "12 min by car" : "12 min in auto" },
                 { name: isEn ? "Beaches of Monopoli & Polignano a Mare" : "Spiagge di Monopoli e Polignano a Mare", dist: "28 km", time: isEn ? "30 min by car" : "30 min in auto" },
               ].map((item, idx) => (
-                <div key={idx} className="py-3.5 flex items-center justify-between text-sm">
-                  <span className="font-medium text-[#1e3329]">{item.name}</span>
-                  <div className="text-right">
-                    <span className="text-xs text-[#9f3757] font-semibold block">{item.time}</span>
-                    <span className="text-[11px] text-[#786f66] block">{item.dist}</span>
+                <div key={idx} className="py-3 sm:py-3.5 flex items-center justify-between text-xs sm:text-sm">
+                  <span className="font-medium text-[#1e3329] pr-2">{item.name}</span>
+                  <div className="text-right shrink-0">
+                    <span className="text-[11px] sm:text-xs text-[#9f3757] font-semibold block">{item.time}</span>
+                    <span className="text-[10px] sm:text-[11px] text-[#786f66] block">{item.dist}</span>
                   </div>
                 </div>
               ))}
@@ -443,15 +444,15 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
       </section>
 
       {/* 7. Recensioni d'Autore & Voto Booking */}
-      <section id="reviews" className="py-20 bg-[#f4eee3] border-t border-[#e2d8ca] px-4 sm:px-6 lg:px-12">
+      <section id="reviews" className="py-16 sm:py-20 bg-[#f4eee3] border-t border-[#e2d8ca] px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-10 border-b border-[#ded3c2] mb-12 gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 sm:pb-10 border-b border-[#ded3c2] mb-8 sm:mb-12 gap-3 sm:gap-4">
             <div>
               <span className="text-xs uppercase tracking-[0.25em] text-[#9f3757] font-bold block mb-1">
                 {isEn ? 'Guest Reviews' : 'La Parola agli Ospiti'}
               </span>
-              <h2 className="font-heading text-3xl sm:text-4xl text-[#172e24]">
+              <h2 className="font-heading text-2xl xs:text-3xl sm:text-4xl text-[#172e24]">
                 {isEn ? 'Rating 9.6 out of 10 • Exceptional' : 'Punteggio 9.6 su 10 • Giudizio Eccezionale'}
               </h2>
             </div>
@@ -466,7 +467,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
             {[
               {
                 author: "Perina",
@@ -508,24 +509,24 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                   : "La Signora Marilena gentilissima, e molto disponibile. Un appartamento molto bello e ben curato. Posizione ottima, vicinissima al centro. Tutto perfetto. Grazie mille.",
               },
             ].map((rev, idx) => (
-              <div key={idx} className="bg-white p-7 rounded-2xl border border-[#e2d8ca] shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div key={idx} className="bg-white p-5 sm:p-7 rounded-2xl border border-[#e2d8ca] shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
                 <div>
                   <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#f0eae0]">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#1e382b] text-[#f7e0bc] font-bold text-sm flex items-center justify-center font-heading">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#1e382b] text-[#f7e0bc] font-bold text-xs sm:text-sm flex items-center justify-center font-heading">
                         {rev.author.charAt(0)}
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5">
-                          <span className="font-semibold text-sm text-[#1e3329]">{rev.author}</span>
+                          <span className="font-semibold text-xs sm:text-sm text-[#1e3329]">{rev.author}</span>
                           <span className="text-sm">{rev.flag}</span>
                         </div>
-                        <span className="text-[11px] text-[#8a7f72] block">
+                        <span className="text-[10px] sm:text-[11px] text-[#8a7f72] block">
                           {isEn ? rev.countryEn : rev.country} • {isEn ? rev.dateEn : rev.date}
                         </span>
                       </div>
                     </div>
-                    <div className="px-2.5 py-1 rounded-lg bg-[#003580] text-white font-bold text-xs shadow-2xs flex items-center gap-1">
+                    <div className="px-2 sm:px-2.5 py-1 rounded-lg bg-[#003580] text-white font-bold text-xs shadow-2xs flex items-center gap-1">
                       <span>{rev.score}</span>
                     </div>
                   </div>
@@ -534,12 +535,12 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                     ★ {rev.title}
                   </span>
 
-                  <p className="font-serif italic text-base text-[#4a4239] leading-relaxed mb-4">
+                  <p className="font-serif italic text-sm sm:text-base text-[#4a4239] leading-relaxed mb-4">
                     "{rev.text}"
                   </p>
                 </div>
 
-                <div className="text-[11px] font-medium text-[#7a7064] pt-3 border-t border-[#f4ede3] flex items-center justify-between">
+                <div className="text-[10px] sm:text-[11px] font-medium text-[#7a7064] pt-3 border-t border-[#f4ede3] flex items-center justify-between">
                   <span>{isEn ? 'Verified on Booking.com' : 'Recensione verificata Booking.com'}</span>
                   <span className="text-emerald-700 font-bold">10 / 10</span>
                 </div>
@@ -551,7 +552,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
       </section>
 
       {/* 8. Contatto Diretto con Marilena Liuzzi (Minimalist Direct Booking) */}
-      <section className="py-24 sm:py-32 px-4 sm:px-6 lg:px-12 max-w-5xl mx-auto text-center">
+      <section className="py-16 sm:py-32 px-4 sm:px-6 lg:px-12 max-w-5xl mx-auto text-center">
         <span className="text-xs uppercase tracking-[0.25em] text-[#9f3757] font-bold block mb-3">
           {isEn ? 'Direct Reservation' : 'Prenotazione Diretta'}
         </span>

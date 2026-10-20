@@ -48,25 +48,25 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#faf7f2]/95 backdrop-blur-md py-3 border-b border-[#e5dac9] shadow-md'
-            : 'bg-[#faf7f2]/90 backdrop-blur-xs py-4 border-b border-[#ece2d3]'
+            ? 'bg-[#faf7f2]/95 backdrop-blur-md py-2.5 sm:py-3 border-b border-[#e5dac9] shadow-md'
+            : 'bg-[#faf7f2]/92 backdrop-blur-xs py-3 sm:py-4 border-b border-[#ece2d3]'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-2 sm:gap-4">
             
             {/* Logo & Brand Name */}
-            <a href="#" className="flex items-center gap-3 shrink-0 group">
+            <a href="#" className="flex items-center gap-2 sm:gap-3 shrink min-w-0 group">
               <img
                 src="/images/logo-badge.png"
                 alt="Logo Il Giardino dei Ricordi"
-                className="w-10 h-10 sm:w-11 sm:h-11 object-contain rounded-full border border-[#c8a97e]/60 shadow-xs group-hover:scale-105 transition-transform"
+                className="w-9 h-9 sm:w-11 sm:h-11 object-contain rounded-full border border-[#c8a97e]/60 shadow-xs group-hover:scale-105 transition-transform shrink-0"
               />
-              <div className="flex flex-col whitespace-nowrap">
-                <span className="font-heading text-xl sm:text-2xl font-normal text-[#172e24] tracking-wide leading-tight group-hover:text-[#2d4a3e] transition-colors">
+              <div className="flex flex-col min-w-0 truncate">
+                <span className="font-heading text-base sm:text-xl lg:text-2xl font-normal text-[#172e24] tracking-wide leading-tight group-hover:text-[#2d4a3e] transition-colors truncate">
                   Il Giardino dei Ricordi
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.22em] text-[#8a7f72] font-sans font-medium">
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[#8a7f72] font-sans font-medium truncate">
                   Alberobello • Valle d'Itria
                 </span>
               </div>
@@ -92,20 +92,20 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
             </nav>
 
             {/* Right Controls: Lingua (Pill Fissa Senza Salti), Richiedi Disponibilità & Menù */}
-            <div className="flex items-center gap-2.5 sm:gap-3 shrink-0 ml-auto">
+            <div className="flex items-center gap-1.5 sm:gap-3 shrink-0 ml-auto">
               
               {/* Rock-solid, non-shifting Sliding Language Switch */}
-              <div className="relative flex items-center bg-[#eee7db] p-0.5 rounded-full border border-[#d8cdbc] w-[64px] h-[30px] shrink-0 shadow-2xs">
+              <div className="relative flex items-center bg-[#eee7db] p-0.5 rounded-full border border-[#d8cdbc] w-[58px] sm:w-[64px] h-[28px] sm:h-[30px] shrink-0 shadow-2xs">
                 {/* Sliding indicator */}
                 <div
-                  className={`absolute top-0.5 bottom-0.5 w-[30px] rounded-full bg-[#1e382b] transition-transform duration-250 ease-out shadow-xs pointer-events-none ${
-                    language === 'en' ? 'translate-x-[30px]' : 'translate-x-0'
+                  className={`absolute top-0.5 bottom-0.5 w-[26px] sm:w-[30px] rounded-full bg-[#1e382b] transition-transform duration-250 ease-out shadow-xs pointer-events-none ${
+                    language === 'en' ? 'translate-x-[28px] sm:translate-x-[30px]' : 'translate-x-0'
                   }`}
                 />
                 <button
                   type="button"
                   onClick={() => setLanguage('it')}
-                  className={`relative z-10 w-[30px] h-full flex items-center justify-center text-[10px] font-bold tracking-wider cursor-pointer select-none transition-colors duration-200 ${
+                  className={`relative z-10 w-[27px] sm:w-[30px] h-full flex items-center justify-center text-[9px] sm:text-[10px] font-bold tracking-wider cursor-pointer select-none transition-colors duration-200 ${
                     language === 'it' ? 'text-white' : 'text-[#6b6256] hover:text-[#1e382b]'
                   }`}
                   aria-label="Lingua italiana"
@@ -115,7 +115,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                 <button
                   type="button"
                   onClick={() => setLanguage('en')}
-                  className={`relative z-10 w-[30px] h-full flex items-center justify-center text-[10px] font-bold tracking-wider cursor-pointer select-none transition-colors duration-200 ${
+                  className={`relative z-10 w-[27px] sm:w-[30px] h-full flex items-center justify-center text-[9px] sm:text-[10px] font-bold tracking-wider cursor-pointer select-none transition-colors duration-200 ${
                     language === 'en' ? 'text-white' : 'text-[#6b6256] hover:text-[#1e382b]'
                   }`}
                   aria-label="English language"
@@ -124,21 +124,21 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                 </button>
               </div>
 
-              {/* Tasto "Richiedi Disponibilità" con larghezza rigorosamente FISSA (zero spostamenti tra IT ed EN) */}
+              {/* Tasto "Richiedi Disponibilità": Su mobile è un bottone elegante e compatto, su desktop è largo 215px fisso */}
               <button
                 type="button"
                 onClick={onOpenBooking}
-                className="cursor-pointer inline-flex items-center justify-center gap-1.5 py-2 w-[160px] sm:w-[215px] rounded-full bg-[#1e382b] hover:bg-[#162d22] text-white text-[10px] sm:text-xs uppercase tracking-[0.14em] font-semibold transition-colors duration-200 shadow-sm hover:shadow shrink-0"
+                className="cursor-pointer hidden sm:inline-flex items-center justify-center gap-1.5 py-2 w-[170px] sm:w-[215px] rounded-full bg-[#1e382b] hover:bg-[#162d22] text-white text-[10px] sm:text-xs uppercase tracking-[0.14em] font-semibold transition-colors duration-200 shadow-sm hover:shadow shrink-0"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#e6cfab] shrink-0" />
                 <span className="truncate">{language === 'en' ? 'Check Availability' : 'Richiedi Disponibilità'}</span>
               </button>
 
-              {/* Tasto Menù Laterale con larghezza rigorosamente FISSA */}
+              {/* Tasto Menù Laterale con icona e stile luxury su mobile e desktop */}
               <button
                 type="button"
                 onClick={() => setMenuOpen(true)}
-                className="cursor-pointer inline-flex items-center justify-center gap-1.5 py-2 w-[42px] sm:w-[86px] rounded-full bg-white hover:bg-[#f2ece0] border border-[#d8cdbc] text-[#1e3329] text-xs uppercase tracking-wider font-semibold transition-colors shadow-2xs shrink-0"
+                className="cursor-pointer inline-flex items-center justify-center gap-1.5 py-1.5 sm:py-2 px-2.5 sm:px-0 w-[38px] sm:w-[86px] h-[28px] sm:h-auto rounded-full bg-white hover:bg-[#f2ece0] border border-[#d8cdbc] text-[#1e3329] text-xs uppercase tracking-wider font-semibold transition-colors shadow-2xs shrink-0"
                 aria-label="Apri Menu"
               >
                 <Menu className="w-4 h-4 text-[#2d4a3e] shrink-0" />
