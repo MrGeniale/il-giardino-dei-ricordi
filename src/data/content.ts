@@ -166,6 +166,7 @@ export interface ContentData {
     guestsLabel: string;
     guestsCount: (n: number) => string;
     cotsOption: string;
+    extraBedOption: string;
     parkingOption: string;
     nameLabel: string;
     phoneLabel: string;
@@ -529,8 +530,9 @@ export const content: Record<'it' | 'en', ContentData> = {
       checkOut: "Check-out",
       guestsLabel: "Numero Ospiti",
       guestsCount: (n: number) => `${n} ${n === 1 ? 'Ospite' : 'Ospiti'}`,
-      cotsOption: "Richiedo culla per neonato o letto extra",
-      parkingOption: "Arriverò in auto (richiedo posto auto gratuito)",
+      cotsOption: "Culla per neonato / bebè (0-3 anni)",
+      extraBedOption: "Letto singolo aggiuntivo",
+      parkingOption: "Arriverò in auto (fino a 3 posti gratuiti nel viale privato)",
       nameLabel: "Il tuo nome e cognome",
       phoneLabel: "Il tuo recapito telefonico",
       notesLabel: "Messaggio o richieste particolari",
@@ -891,8 +893,9 @@ export const content: Record<'it' | 'en', ContentData> = {
       checkOut: "Check-out",
       guestsLabel: "Number of Guests",
       guestsCount: (n: number) => `${n} ${n === 1 ? 'Guest' : 'Guests'}`,
-      cotsOption: "Request baby cot or extra bed",
-      parkingOption: "Arriving by car (request free parking spot)",
+      cotsOption: "Baby cot / crib (0-3 years)",
+      extraBedOption: "Extra single bed",
+      parkingOption: "Arriving by car (up to 3 free parking spots on site)",
       nameLabel: "Your Name",
       phoneLabel: "Phone Number",
       notesLabel: "Message or special requests",

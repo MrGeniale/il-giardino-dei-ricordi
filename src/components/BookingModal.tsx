@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { X, Calendar, Users, Car, Baby, MessageCircle, Phone, Sparkles } from 'lucide-react';
+import { X, Calendar, Users, Car, Baby, Bed, MessageCircle, Phone, Sparkles } from 'lucide-react';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -8,11 +8,13 @@ interface BookingModalProps {
 }
 
 export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isEn = language === 'en';
   const [checkIn, setCheckIn] = useState('');
   const [checkOut, setCheckOut] = useState('');
   const [guests, setGuests] = useState('2');
   const [needCot, setNeedCot] = useState(false);
+  const [needExtraBed, setNeedExtraBed] = useState(false);
   const [needParking, setNeedParking] = useState(true);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -22,14 +24,26 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
 
   const handleSubmitWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
-    const parts = [
+    const parts = isEn ? [
+      `Hello Marilena, I would like to check availability for a stay at *Il Giardino dei Ricordi* in Alberobello:`,
+      `• *Name:* ${name || 'Not specified'}`,
+      `• *Phone:* ${phone || 'Not specified'}`,
+      `• *Dates:* from ${checkIn || 'to be agreed'} to ${checkOut || 'to be agreed'}`,
+      `• *Number of Guests:* ${guests}`,
+      needCot ? `• *Extra Requested:* Baby cot / crib (0-3 years)` : null,
+      needExtraBed ? `• *Extra Requested:* Extra single bed` : null,
+      needParking ? `• *Parking:* Yes, arriving by car (request free spot in private driveway)` : null,
+      notes ? `• *Special requests:* ${notes}` : null,
+      `\nCould you please confirm availability and direct rate? Thank you!`,
+    ].filter(Boolean).join('\n') : [
       `Buongiorno Marilena, vorrei verificare la disponibilità per un soggiorno a *Il Giardino dei Ricordi* ad Alberobello:`,
       `• *Nome:* ${name || 'Non specificato'}`,
       `• *Telefono:* ${phone || 'Non specificato'}`,
       `• *Date soggiorno:* dal ${checkIn || 'da concordare'} al ${checkOut || 'da concordare'}`,
       `• *Numero Ospiti:* ${guests}`,
-      needCot ? `• *Richiesta:* Culla / Letto aggiuntivo per bambini` : null,
-      needParking ? `• *Posto Auto:* Sì, arriverò in auto (richiedo posto gratuito)` : null,
+      needCot ? `• *Opzione Extra:* Culla bebè / neonato (0-3 anni)` : null,
+      needExtraBed ? `• *Opzione Extra:* Letto singolo aggiuntivo` : null,
+      needParking ? `• *Posto Auto:* Sì, arriverò in auto (richiedo posto gratuito nel viale)` : null,
       notes ? `• *Note:* ${notes}` : null,
       `\nResto in attesa di una vostra conferma per queste date. Grazie!`,
     ].filter(Boolean).join('\n');
@@ -54,7 +68,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
         <div className="mb-6">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2d4a3e]/10 text-[#2d4a3e] text-[11px] font-bold uppercase tracking-wider mb-2">
             <Sparkles className="w-3 h-3 text-[#c8a97e]" />
-            <span>Contatto Diretto Marilena Liuzzi</span>
+            <span>{isEn ? 'Direct Host Contact • Marilena Liuzzi' : 'Contatto Diretto Marilena Liuzzi'}</span>
           </div>
           <h3 className="text-2xl font-heading font-semibold text-[#172e24]">
             {t.bookingModal.title}
@@ -98,7 +112,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
             </div>
           </div>
 
-          {/* Guests & Options */}
+          {/* Guests Count (Clean & Simple) */}
           <div>
             <label className="block text-[11px] font-bold uppercase tracking-wider text-[#60574d] mb-1 flex items-center gap-1">
               <Users className="w-3.5 h-3.5 text-[#2d4a3e]" />
@@ -109,36 +123,52 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
               onChange={(e) => setGuests(e.target.value)}
               className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs sm:text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2d4a3e]"
             >
-              <option value="1 Ospite">1 Ospite</option>
-              <option value="2 Ospiti">2 Ospiti</option>
-              <option value="3 Ospiti">3 Ospiti</option>
-              <option value="4 Ospiti (Capienza massima)">4 Ospiti (Capienza massima)</option>
-              <option value="4 Ospiti + Neonato in culla">4 Ospiti + Neonato in culla</option>
-              <option value="4 Ospiti + Letto extra">4 Ospiti + Letto extra</option>
+              <option value={isEn ? "1 Guest" : "1 Ospite"}>{isEn ? "1 Guest" : "1 Ospite"}</option>
+              <option value={isEn ? "2 Guests" : "2 Ospiti"}>{isEn ? "2 Guests" : "2 Ospiti"}</option>
+              <option value={isEn ? "3 Guests" : "3 Ospiti"}>{isEn ? "3 Guests" : "3 Ospiti"}</option>
+              <option value={isEn ? "4 Guests" : "4 Ospiti"}>{isEn ? "4 Guests" : "4 Ospiti"}</option>
             </select>
           </div>
 
-          {/* Checkboxes for Cot & Free Parking */}
-          <div className="space-y-2 pt-1 bg-white p-3 rounded-xl border border-[#e6decf]">
-            <label className="flex items-center gap-2 cursor-pointer text-xs text-[#413932]">
+          {/* Independent Extra Options: Culla & Letto Singolo & Parcheggio a prescindere dal numero di ospiti */}
+          <div className="space-y-2.5 pt-1 bg-white p-3.5 rounded-xl border border-[#e6decf]">
+            <span className="block text-[10px] font-bold uppercase tracking-widest text-[#8a7f72]">
+              {isEn ? 'Optional Extras on Request' : 'Opzioni Extra su Richiesta'}
+            </span>
+
+            {/* Culla Bebè */}
+            <label className="flex items-center gap-2.5 cursor-pointer text-xs text-[#3b342e] hover:text-[#1e382b]">
               <input
                 type="checkbox"
                 checked={needCot}
                 onChange={(e) => setNeedCot(e.target.checked)}
                 className="w-4 h-4 rounded text-[#2d4a3e] focus:ring-[#2d4a3e] accent-[#2d4a3e]"
               />
-              <Baby className="w-3.5 h-3.5 text-[#9f3757]" />
+              <Baby className="w-4 h-4 text-[#9f3757] shrink-0" />
               <span>{t.bookingModal.cotsOption}</span>
             </label>
 
-            <label className="flex items-center gap-2 cursor-pointer text-xs text-[#413932]">
+            {/* Letto Singolo Extra */}
+            <label className="flex items-center gap-2.5 cursor-pointer text-xs text-[#3b342e] hover:text-[#1e382b]">
+              <input
+                type="checkbox"
+                checked={needExtraBed}
+                onChange={(e) => setNeedExtraBed(e.target.checked)}
+                className="w-4 h-4 rounded text-[#2d4a3e] focus:ring-[#2d4a3e] accent-[#2d4a3e]"
+              />
+              <Bed className="w-4 h-4 text-[#c8a97e] shrink-0" />
+              <span>{t.bookingModal.extraBedOption}</span>
+            </label>
+
+            {/* Posto Auto Gratuito */}
+            <label className="flex items-center gap-2.5 cursor-pointer text-xs text-[#3b342e] hover:text-[#1e382b]">
               <input
                 type="checkbox"
                 checked={needParking}
                 onChange={(e) => setNeedParking(e.target.checked)}
                 className="w-4 h-4 rounded text-[#2d4a3e] focus:ring-[#2d4a3e] accent-[#2d4a3e]"
               />
-              <Car className="w-3.5 h-3.5 text-emerald-700" />
+              <Car className="w-4 h-4 text-emerald-700 shrink-0" />
               <span className="font-semibold text-[#1e3a2f]">{t.bookingModal.parkingOption}</span>
             </label>
           </div>

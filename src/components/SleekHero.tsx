@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Sparkles, MessageCircle, Calendar, Users, Car, MapPin, Trees, Bed, ChevronRight, CheckCircle2, ChevronLeft } from 'lucide-react';
+import { Sparkles, MessageCircle, Calendar, Users, Car, MapPin, Trees, Bed, Baby, ChevronRight, CheckCircle2, ChevronLeft } from 'lucide-react';
 
 interface SleekHeroProps {
   onOpenBooking: () => void;
@@ -12,6 +12,8 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
   const [checkIn, setCheckIn] = useState('');
   const [checkOut, setCheckOut] = useState('');
   const [guests, setGuests] = useState('2');
+  const [needCot, setNeedCot] = useState(false);
+  const [needExtraBed, setNeedExtraBed] = useState(false);
 
   const isEn = language === 'en';
 
@@ -47,9 +49,11 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
 
   const handleQuickInquiry = (e: React.FormEvent) => {
     e.preventDefault();
+    const cotStr = needCot ? (isEn ? ' • Baby cot requested' : ' • Culla bebè richiesta') : '';
+    const extraBedStr = needExtraBed ? (isEn ? ' • Extra single bed requested' : ' • Letto singolo extra richiesto') : '';
     const msg = isEn
-      ? `Hello Marilena, I would like to check availability for Il Giardino dei Ricordi in Alberobello:\n- Dates: from ${checkIn || 'to be agreed'} to ${checkOut || 'to be agreed'}\n- Guests: ${guests}\n- Parking requested: Yes (up to 3 free spaces)\nCould you please confirm availability for these dates? Thank you!`
-      : `Buongiorno Marilena, vorrei verificare la disponibilità a Il Giardino dei Ricordi ad Alberobello:\n- Date: dal ${checkIn || 'da concordare'} al ${checkOut || 'da concordare'}\n- Ospiti: ${guests}\n- Richiesta posto auto: Sì (fino a 3 posti gratuiti)\nPotete confermarmi la disponibilità per queste date? Grazie!`;
+      ? `Hello Marilena, I would like to check availability for Il Giardino dei Ricordi in Alberobello:\n- Dates: from ${checkIn || 'to be agreed'} to ${checkOut || 'to be agreed'}\n- Guests: ${guests}${cotStr}${extraBedStr}\n- Parking requested: Yes (up to 3 free spaces in private driveway)\nCould you please confirm availability for these dates? Thank you!`
+      : `Buongiorno Marilena, vorrei verificare la disponibilità a Il Giardino dei Ricordi ad Alberobello:\n- Date: dal ${checkIn || 'da concordare'} al ${checkOut || 'da concordare'}\n- Ospiti: ${guests}${cotStr}${extraBedStr}\n- Richiesta posto auto: Sì (fino a 3 posti gratuiti nel viale)\nPotete confermarmi la disponibilità per queste date? Grazie!`;
     window.open(`https://wa.me/${t.brand.phoneRaw}?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
@@ -242,12 +246,10 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
                 onChange={(e) => setGuests(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#2d4a3e] focus:outline-hidden"
               >
-                <option value="1 Ospite">{isEn ? '1 Guest' : '1 Ospite'}</option>
-                <option value="2 Ospiti">{isEn ? '2 Guests' : '2 Ospiti'}</option>
-                <option value="3 Ospiti">{isEn ? '3 Guests' : '3 Ospiti'}</option>
-                <option value="4 Ospiti (Famiglia)">{isEn ? '4 Guests (Family)' : '4 Ospiti (Famiglia)'}</option>
-                <option value="4 Ospiti + Culla bebè">{isEn ? '4 Guests + Baby cot' : '4 Ospiti + Culla bebè'}</option>
-                <option value="4 Ospiti + Letto extra">{isEn ? '4 Guests + Extra bed' : '4 Ospiti + Letto extra'}</option>
+                <option value={isEn ? "1 Guest" : "1 Ospite"}>{isEn ? '1 Guest' : '1 Ospite'}</option>
+                <option value={isEn ? "2 Guests" : "2 Ospiti"}>{isEn ? '2 Guests' : '2 Ospiti'}</option>
+                <option value={isEn ? "3 Guests" : "3 Ospiti"}>{isEn ? '3 Guests' : '3 Ospiti'}</option>
+                <option value={isEn ? "4 Guests" : "4 Ospiti"}>{isEn ? '4 Guests' : '4 Ospiti'}</option>
               </select>
             </div>
 
@@ -262,6 +264,35 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
               </button>
             </div>
           </form>
+
+          {/* Independent Extra Options for Baby Cot & Extra Single Bed */}
+          <div className="mt-3.5 pt-3 border-t border-[#ece4d6] flex flex-wrap items-center gap-x-6 gap-y-2">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#71685e]">
+              {isEn ? 'Optional Extras:' : 'Opzioni Extra:'}
+            </span>
+
+            <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-[#2b241e] font-medium hover:text-[#1e382b] select-none">
+              <input
+                type="checkbox"
+                checked={needCot}
+                onChange={(e) => setNeedCot(e.target.checked)}
+                className="w-4 h-4 rounded text-[#2d4a3e] border-[#c8beaf] focus:ring-[#2d4a3e] accent-[#2d4a3e] cursor-pointer"
+              />
+              <Baby className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+              <span>{isEn ? 'Baby cot / crib (0-3 yrs free)' : 'Culla bebè (0-3 anni gratis)'}</span>
+            </label>
+
+            <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-[#2b241e] font-medium hover:text-[#1e382b] select-none">
+              <input
+                type="checkbox"
+                checked={needExtraBed}
+                onChange={(e) => setNeedExtraBed(e.target.checked)}
+                className="w-4 h-4 rounded text-[#2d4a3e] border-[#c8beaf] focus:ring-[#2d4a3e] accent-[#2d4a3e] cursor-pointer"
+              />
+              <Bed className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
+              <span>{isEn ? 'Extra single bed' : 'Letto singolo extra'}</span>
+            </label>
+          </div>
 
           <div className="flex flex-wrap items-center justify-between gap-3 mt-4 pt-3.5 border-t border-[#e8dfd2] text-xs text-[#71685e]">
             <div className="flex items-center gap-1.5">
