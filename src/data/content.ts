@@ -454,6 +454,18 @@ export const content: Record<'it' | 'en', ContentData> = {
           desc: "I borghi bianchi più suggestivi della Valle d'Itria",
         },
         {
+          name: "Cisternino",
+          distance: "18 km",
+          time: "20 min in auto",
+          desc: "Caratteristico borgo autentico tra i più belli d'Italia",
+        },
+        {
+          name: "Ostuni (La Città Bianca)",
+          distance: "34 km",
+          time: "35 min in auto",
+          desc: "L'iconica perla bianca arroccata con scorci mozzafiato sul mare",
+        },
+        {
           name: "Spiagge di Monopoli e Polignano",
           distance: "28 km",
           time: "30 min in auto",
@@ -815,6 +827,18 @@ export const content: Record<'it' | 'en', ContentData> = {
           distance: "9 - 14 km",
           time: "12 min drive",
           desc: "The picturesque whitewashed towns of Valle d'Itria",
+        },
+        {
+          name: "Cisternino",
+          distance: "18 km",
+          time: "20 min drive",
+          desc: "Charming historic village ranked among the most beautiful in Italy",
+        },
+        {
+          name: "Ostuni (The White City)",
+          distance: "34 km",
+          time: "35 min drive",
+          desc: "The iconic whitewashed hill town with sweeping Adriatic views",
         },
         {
           name: "Beaches of Monopoli & Polignano",

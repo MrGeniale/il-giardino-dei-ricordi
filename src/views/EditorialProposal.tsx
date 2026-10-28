@@ -404,6 +404,8 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                 { name: isEn ? "Trullo Sovrano" : "Trullo Sovrano", dist: "900 m", time: isEn ? "11 min walk" : "11 min a piedi" },
                 { name: isEn ? "Basilica of SS. Cosmas & Damian" : "Basilica SS. Cosma e Damiano", dist: "650 m", time: isEn ? "7 min walk" : "7 min a piedi" },
                 { name: isEn ? "Locorotondo & Martina Franca" : "Locorotondo & Martina Franca", dist: "9 - 14 km", time: isEn ? "12 min by car" : "12 min in auto" },
+                { name: isEn ? "Cisternino" : "Cisternino", dist: "18 km", time: isEn ? "20 min by car" : "20 min in auto" },
+                { name: isEn ? "Ostuni (La Città Bianca)" : "Ostuni (La Città Bianca)", dist: "34 km", time: isEn ? "35 min by car" : "35 min in auto" },
                 { name: isEn ? "Beaches of Monopoli & Polignano a Mare" : "Spiagge di Monopoli e Polignano a Mare", dist: "28 km", time: isEn ? "30 min by car" : "30 min in auto" },
               ].map((item, idx) => (
                 <div key={idx} className="py-3 sm:py-3.5 flex items-center justify-between text-xs sm:text-sm">
