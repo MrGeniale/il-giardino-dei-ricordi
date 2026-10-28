@@ -430,6 +430,18 @@ export const content: Record<'it' | 'en', ContentData> = {
           desc: "Celebre architettura sacra a forma di trullo",
         },
         {
+          name: "Belvedere dei Trulli",
+          distance: "700 metri",
+          time: "8 min a piedi",
+          desc: "La celebre terrazza panoramica con vista sull'intero Rione Monti",
+        },
+        {
+          name: "Aia Piccola",
+          distance: "750 metri",
+          time: "9 min a piedi",
+          desc: "Il borgo di trulli più autentico e tranquillo di Alberobello",
+        },
+        {
           name: "Rione Monti (Trulli storici)",
           distance: "850 metri",
           time: "10 min a piedi",
@@ -803,6 +815,18 @@ export const content: Record<'it' | 'en', ContentData> = {
           distance: "700 meters",
           time: "8 min walk",
           desc: "Famous trullo-shaped historic church",
+        },
+        {
+          name: "Belvedere dei Trulli (Panoramic Terrace)",
+          distance: "700 meters",
+          time: "8 min walk",
+          desc: "Iconic scenic overlook with sweeping views of the historic trulli cones",
+        },
+        {
+          name: "Aia Piccola (Historic District)",
+          distance: "750 meters",
+          time: "9 min walk",
+          desc: "The most authentic, peaceful, and residential trulli quarter",
         },
         {
           name: "Rione Monti (Historic Trulli)",

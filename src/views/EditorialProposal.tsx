@@ -400,6 +400,8 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
             <div className="divide-y divide-[#e8dfd2] border-y border-[#e8dfd2]">
               {[
                 { name: isEn ? "Trullo Church of St. Anthony" : "Chiesa a Trullo di Sant'Antonio", dist: "700 m", time: isEn ? "8 min walk" : "8 min a piedi" },
+                { name: isEn ? "Belvedere dei Trulli (Panoramic View)" : "Belvedere dei Trulli", dist: "700 m", time: isEn ? "8 min walk" : "8 min a piedi" },
+                { name: isEn ? "Aia Piccola (Authentic Trulli Quarter)" : "Aia Piccola", dist: "750 m", time: isEn ? "9 min walk" : "9 min a piedi" },
                 { name: isEn ? "Rione Monti (Monumental Quarter)" : "Rione Monti (Quartiere monumentale)", dist: "850 m", time: isEn ? "10 min walk" : "10 min a piedi" },
                 { name: isEn ? "Trullo Sovrano" : "Trullo Sovrano", dist: "900 m", time: isEn ? "11 min walk" : "11 min a piedi" },
                 { name: isEn ? "Basilica of SS. Cosmas & Damian" : "Basilica SS. Cosma e Damiano", dist: "650 m", time: isEn ? "7 min walk" : "7 min a piedi" },
