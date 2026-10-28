@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
   :root {
     --font-heading: 'Cormorant Garamond', Garamond, Georgia, serif;
     --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;

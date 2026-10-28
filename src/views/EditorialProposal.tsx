@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { MessageCircle, Phone, ArrowUpRight, ShieldCheck, MapPin, ExternalLink, Sparkles } from 'lucide-react';
+import { GallerySection } from '../components/GallerySection';
 
 interface EditorialProposalProps {
   onOpenBooking: () => void;
@@ -342,8 +343,8 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
         </div>
       </section>
 
-      {/* 5. Il Parcheggio Privato: Una Rarità ad Alberobello */}
-      <section className="bg-[#03624c] text-white py-16 sm:py-28 px-4 sm:px-6 lg:px-12 relative overflow-hidden">
+      {/* 5. Il Parcheggio Privato: Una Rarità ad Alberobello (I Privilegi) */}
+      <section id="privileges" className="bg-[#03624c] text-white py-16 sm:py-28 px-4 sm:px-6 lg:px-12 relative overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           <div className="lg:col-span-7">
@@ -379,7 +380,10 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
         </div>
       </section>
 
-      {/* 6. Distanze a Piedi & Mappa Territorio */}
+      {/* 6. Galleria Fotografica Completa con Lightbox Interattivo */}
+      <GallerySection />
+
+      {/* 7. Distanze a Piedi & Mappa Territorio */}
       <section id="location" className="py-16 sm:py-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
         <div className="max-w-3xl mb-10 sm:mb-16">
           <span className="text-xs uppercase tracking-[0.25em] text-[#9f3757] font-bold block mb-2">

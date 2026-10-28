@@ -54,8 +54,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                 </a>
               </li>
               <li>
-                <a href="#privileges" className="hover:text-white transition-colors">
-                  {t.nav.privileges}
+                <a href="#spaces" className="hover:text-white transition-colors">
+                  {t.nav.spaces}
                 </a>
               </li>
               <li>
@@ -64,13 +64,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                 </a>
               </li>
               <li>
-                <a href="#spaces" className="hover:text-white transition-colors">
-                  {t.nav.spaces}
-                </a>
-              </li>
-              <li>
-                <a href="#amenities" className="hover:text-white transition-colors">
-                  {t.nav.amenities}
+                <a href="#privileges" className="hover:text-white transition-colors">
+                  {t.nav.privileges}
                 </a>
               </li>
               <li>

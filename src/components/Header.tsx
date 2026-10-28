@@ -32,9 +32,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
 
   const navLinks = [
     { href: '#about', label: t.nav.story, sub: 'La nostra storia ad Alberobello' },
-    { href: '#privileges', label: t.nav.privileges, sub: '2 Posti Auto e comfort unici' },
-    { href: '#garden', label: t.nav.garden, sub: 'L’oasi verde con fico secolare' },
     { href: '#spaces', label: t.nav.spaces, sub: '2 Camere, 2 Bagni e Cucina' },
+    { href: '#garden', label: t.nav.garden, sub: 'L’oasi verde con fico secolare' },
+    { href: '#privileges', label: t.nav.privileges, sub: '2 Posti Auto e comfort unici' },
     { href: '#gallery', label: t.nav.gallery, sub: 'Gli scatti della dimora' },
     { href: '#location', label: t.nav.location, sub: '700m dai Trulli storici' },
     { href: '#reviews', label: t.nav.reviews, sub: 'Valutazione 9.7 su Booking' },
