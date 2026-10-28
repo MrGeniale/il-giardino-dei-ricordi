@@ -264,10 +264,10 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                     {isEn ? '04 • Living & Fully Equipped Kitchen' : '04 • Living & Cucina Attrezzata'}
                   </span>
                   <h4 className="font-heading text-2xl text-[#172e24] mb-2">
-                    {isEn ? 'Open space with oven, microwave & dining table for 6' : 'Open space con forno, microonde e tavolo per 6'}
+                    {isEn ? 'Open space with dishwasher, oven & dining table for 6' : 'Open space con lavastoviglie, forno e tavolo per 6'}
                   </h4>
                   <p className="text-xs sm:text-sm text-[#61584e] font-sans leading-relaxed">
-                    {isEn ? 'Complete kitchen for full culinary autonomy: stovetop, refrigerator, espresso machine, air conditioning unit, Smart TV, and two comfortable relaxing sofas.' : 'Cucina completa per preparare i pasti in totale autonomia: piano cottura, frigorifero, macchina del caffè espresso, climatizzatore, Smart TV e due comodi divani relax.'}
+                    {isEn ? 'Complete kitchen for full culinary autonomy: dishwasher, stovetop, oven, refrigerator, espresso machine, air conditioning unit, Smart TV, and two comfortable relaxing sofas.' : 'Cucina completa per preparare i pasti in totale autonomia: lavastoviglie, piano cottura, forno, frigorifero, macchina del caffè espresso, climatizzatore, Smart TV e due comodi divani relax.'}
                   </p>
                 </div>
               </div>

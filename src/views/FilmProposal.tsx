@@ -178,7 +178,7 @@ export const FilmProposal: React.FC<FilmProposalProps> = ({ onOpenBooking }) => 
             </div>
             <div className="p-4 rounded-xl bg-white/5 border border-white/10">
               <span className="font-heading text-lg text-white font-medium block mb-1">Cucina Attrezzata</span>
-              <p className="text-xs text-[#b8b0a2]">Forno, microonde, frigo e macchina del caffè</p>
+              <p className="text-xs text-[#b8b0a2]">Lavastoviglie, forno, microonde, frigo e macchina del caffè</p>
             </div>
             <div className="p-4 rounded-xl bg-white/5 border border-white/10">
               <span className="font-heading text-lg text-white font-medium block mb-1">700m dai Trulli</span>
