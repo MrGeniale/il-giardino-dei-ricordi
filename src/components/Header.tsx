@@ -63,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                 className="w-9 h-9 sm:w-11 sm:h-11 object-contain rounded-full border border-[#c8a97e]/60 shadow-xs group-hover:scale-105 transition-transform shrink-0"
               />
               <div className="flex flex-col min-w-0 truncate">
-                <span className="font-heading text-base sm:text-xl lg:text-2xl font-normal text-[#172e24] tracking-wide leading-tight group-hover:text-[#2d4a3e] transition-colors truncate">
+                <span className="font-heading text-base sm:text-xl lg:text-2xl font-normal text-[#172e24] tracking-wide leading-tight group-hover:text-[#03624c] transition-colors truncate">
                   Il Giardino dei Ricordi
                 </span>
                 <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[#8a7f72] font-sans font-medium truncate">
@@ -98,7 +98,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               <div className="relative flex items-center bg-[#eee7db] p-0.5 rounded-full border border-[#d8cdbc] w-[58px] sm:w-[64px] h-[28px] sm:h-[30px] shrink-0 shadow-2xs">
                 {/* Sliding indicator */}
                 <div
-                  className={`absolute top-0.5 bottom-0.5 w-[26px] sm:w-[30px] rounded-full bg-[#1e382b] transition-transform duration-250 ease-out shadow-xs pointer-events-none ${
+                  className={`absolute top-0.5 bottom-0.5 w-[26px] sm:w-[30px] rounded-full bg-[#03624c] transition-transform duration-250 ease-out shadow-xs pointer-events-none ${
                     language === 'en' ? 'translate-x-[28px] sm:translate-x-[30px]' : 'translate-x-0'
                   }`}
                 />
@@ -106,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                   type="button"
                   onClick={() => setLanguage('it')}
                   className={`relative z-10 w-[27px] sm:w-[30px] h-full flex items-center justify-center text-[9px] sm:text-[10px] font-bold tracking-wider cursor-pointer select-none transition-colors duration-200 ${
-                    language === 'it' ? 'text-white' : 'text-[#6b6256] hover:text-[#1e382b]'
+                    language === 'it' ? 'text-white' : 'text-[#6b6256] hover:text-[#03624c]'
                   }`}
                   aria-label="Lingua italiana"
                 >
@@ -116,7 +116,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                   type="button"
                   onClick={() => setLanguage('en')}
                   className={`relative z-10 w-[27px] sm:w-[30px] h-full flex items-center justify-center text-[9px] sm:text-[10px] font-bold tracking-wider cursor-pointer select-none transition-colors duration-200 ${
-                    language === 'en' ? 'text-white' : 'text-[#6b6256] hover:text-[#1e382b]'
+                    language === 'en' ? 'text-white' : 'text-[#6b6256] hover:text-[#03624c]'
                   }`}
                   aria-label="English language"
                 >
@@ -128,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               <button
                 type="button"
                 onClick={onOpenBooking}
-                className="cursor-pointer hidden sm:inline-flex items-center justify-center gap-1.5 py-2 w-[170px] sm:w-[215px] rounded-full bg-[#1e382b] hover:bg-[#162d22] text-white text-[10px] sm:text-xs uppercase tracking-[0.14em] font-semibold transition-colors duration-200 shadow-sm hover:shadow shrink-0"
+                className="cursor-pointer hidden sm:inline-flex items-center justify-center gap-1.5 py-2 w-[170px] sm:w-[215px] rounded-full bg-[#03624c] hover:bg-[#024d3c] text-white text-[10px] sm:text-xs uppercase tracking-[0.14em] font-semibold transition-colors duration-200 shadow-sm hover:shadow shrink-0"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#e6cfab] shrink-0" />
                 <span className="truncate">{language === 'en' ? 'Check Availability' : 'Richiedi Disponibilità'}</span>
@@ -138,10 +138,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               <button
                 type="button"
                 onClick={() => setMenuOpen(true)}
-                className="cursor-pointer inline-flex items-center justify-center gap-1.5 py-1.5 sm:py-2 px-2.5 sm:px-0 w-[38px] sm:w-[86px] h-[28px] sm:h-auto rounded-full bg-white hover:bg-[#f2ece0] border border-[#d8cdbc] text-[#1e3329] text-xs uppercase tracking-wider font-semibold transition-colors shadow-2xs shrink-0"
+                className="cursor-pointer inline-flex items-center justify-center gap-1.5 py-1.5 sm:py-2 px-2.5 sm:px-0 w-[38px] sm:w-[86px] h-[28px] sm:h-auto rounded-full bg-white hover:bg-[#f2ece0] border border-[#d8cdbc] text-[#03624c] text-xs uppercase tracking-wider font-semibold transition-colors shadow-2xs shrink-0"
                 aria-label="Apri Menu"
               >
-                <Menu className="w-4 h-4 text-[#2d4a3e] shrink-0" />
+                <Menu className="w-4 h-4 text-[#03624c] shrink-0" />
                 <span className="hidden sm:inline">{language === 'en' ? 'Menu' : 'Menù'}</span>
               </button>
 
@@ -189,11 +189,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
           <button
             type="button"
             onClick={() => setMenuOpen(false)}
-            className="cursor-pointer flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#f0eae0] hover:bg-[#e6decf] text-[#172e24] text-xs uppercase tracking-wider font-semibold transition-colors"
+            className="cursor-pointer flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#f0eae0] hover:bg-[#e6decf] text-[#03624c] text-xs uppercase tracking-wider font-semibold transition-colors"
             aria-label="Chiudi menu"
           >
             <span>Chiudi</span>
-            <X className="w-4 h-4 text-[#2d4a3e]" />
+            <X className="w-4 h-4 text-[#03624c]" />
           </button>
         </div>
 
@@ -204,17 +204,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               key={item.href}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className="group flex items-baseline justify-between py-2 border-b border-[#eee5d6] hover:border-[#2d4a3e] transition-colors duration-300"
+              className="group flex items-baseline justify-between py-2 border-b border-[#eee5d6] hover:border-[#03624c] transition-colors duration-300"
             >
               <div className="flex items-baseline gap-4 sm:gap-6">
                 <span className="font-mono text-xs font-semibold text-[#c8a97e] tracking-widest">
                   0{idx + 1}
                 </span>
-                <span className="font-heading text-2xl sm:text-3xl text-[#172e24] group-hover:text-[#2d4a3e] group-hover:translate-x-2 transition-transform duration-300 font-normal">
+                <span className="font-heading text-2xl sm:text-3xl text-[#1c2420] group-hover:text-[#03624c] group-hover:translate-x-2 transition-transform duration-300 font-normal">
                   {item.label}
                 </span>
               </div>
-              <ChevronRight className="w-4 h-4 text-[#2d4a3e] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+              <ChevronRight className="w-4 h-4 text-[#03624c] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
             </a>
           ))}
         </nav>
@@ -228,7 +228,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               setMenuOpen(false);
               onOpenBooking();
             }}
-            className="cursor-pointer w-full py-3.5 px-5 rounded-xl bg-[#1e382b] hover:bg-[#152a20] text-white text-xs uppercase tracking-[0.18em] font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
+            className="cursor-pointer w-full py-3.5 px-5 rounded-xl bg-[#03624c] hover:bg-[#024d3c] text-white text-xs uppercase tracking-[0.18em] font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
           >
             <Sparkles className="w-4 h-4 text-[#e6cfab]" />
             <span>Richiedi Disponibilità</span>
@@ -241,7 +241,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 font-semibold text-[#1e382b] hover:text-emerald-700 transition-colors"
+              className="flex items-center gap-1.5 font-semibold text-[#03624c] hover:text-[#024d3c] transition-colors"
             >
               <MessageCircle className="w-4 h-4 text-emerald-600" />
               <span>WhatsApp: {t.brand.phone}</span>

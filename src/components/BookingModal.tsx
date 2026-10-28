@@ -66,7 +66,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
 
         {/* Modal Header */}
         <div className="mb-6">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2d4a3e]/10 text-[#2d4a3e] text-[11px] font-bold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#03624c]/10 text-[#03624c] text-[11px] font-bold uppercase tracking-wider mb-2">
             <Sparkles className="w-3 h-3 text-[#c8a97e]" />
             <span>{isEn ? 'Direct Host Contact • Marilena Liuzzi' : 'Contatto Diretto Marilena Liuzzi'}</span>
           </div>
@@ -85,7 +85,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-[11px] font-bold uppercase tracking-wider text-[#60574d] mb-1 flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5 text-[#2d4a3e]" />
+                <Calendar className="w-3.5 h-3.5 text-[#03624c]" />
                 <span>{t.bookingModal.checkIn}</span>
               </label>
               <input
@@ -93,13 +93,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                 required
                 value={checkIn}
                 onChange={(e) => setCheckIn(e.target.value)}
-                className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs sm:text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2d4a3e]"
+                className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs sm:text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#03624c]"
               />
             </div>
 
             <div>
               <label className="block text-[11px] font-bold uppercase tracking-wider text-[#60574d] mb-1 flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5 text-[#2d4a3e]" />
+                <Calendar className="w-3.5 h-3.5 text-[#03624c]" />
                 <span>{t.bookingModal.checkOut}</span>
               </label>
               <input
@@ -107,7 +107,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                 required
                 value={checkOut}
                 onChange={(e) => setCheckOut(e.target.value)}
-                className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs sm:text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2d4a3e]"
+                className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs sm:text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#03624c]"
               />
             </div>
           </div>
@@ -115,13 +115,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
           {/* Guests Count (Clean & Simple) */}
           <div>
             <label className="block text-[11px] font-bold uppercase tracking-wider text-[#60574d] mb-1 flex items-center gap-1">
-              <Users className="w-3.5 h-3.5 text-[#2d4a3e]" />
+              <Users className="w-3.5 h-3.5 text-[#03624c]" />
               <span>{t.bookingModal.guestsLabel}</span>
             </label>
             <select
               value={guests}
               onChange={(e) => setGuests(e.target.value)}
-              className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs sm:text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2d4a3e]"
+              className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs sm:text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#03624c]"
             >
               <option value={isEn ? "1 Guest" : "1 Ospite"}>{isEn ? "1 Guest" : "1 Ospite"}</option>
               <option value={isEn ? "2 Guests" : "2 Ospiti"}>{isEn ? "2 Guests" : "2 Ospiti"}</option>
@@ -137,39 +137,39 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
             </span>
 
             {/* Culla Bebè */}
-            <label className="flex items-center gap-2.5 cursor-pointer text-xs text-[#3b342e] hover:text-[#1e382b]">
+            <label className="flex items-center gap-2.5 cursor-pointer text-xs text-[#3b342e] hover:text-[#03624c]">
               <input
                 type="checkbox"
                 checked={needCot}
                 onChange={(e) => setNeedCot(e.target.checked)}
-                className="w-4 h-4 rounded text-[#2d4a3e] focus:ring-[#2d4a3e] accent-[#2d4a3e]"
+                className="w-4 h-4 rounded text-[#03624c] focus:ring-[#03624c] accent-[#03624c]"
               />
               <Baby className="w-4 h-4 text-[#9f3757] shrink-0" />
               <span>{t.bookingModal.cotsOption}</span>
             </label>
 
             {/* Letto Singolo Extra */}
-            <label className="flex items-center gap-2.5 cursor-pointer text-xs text-[#3b342e] hover:text-[#1e382b]">
+            <label className="flex items-center gap-2.5 cursor-pointer text-xs text-[#3b342e] hover:text-[#03624c]">
               <input
                 type="checkbox"
                 checked={needExtraBed}
                 onChange={(e) => setNeedExtraBed(e.target.checked)}
-                className="w-4 h-4 rounded text-[#2d4a3e] focus:ring-[#2d4a3e] accent-[#2d4a3e]"
+                className="w-4 h-4 rounded text-[#03624c] focus:ring-[#03624c] accent-[#03624c]"
               />
               <Bed className="w-4 h-4 text-[#c8a97e] shrink-0" />
               <span>{t.bookingModal.extraBedOption}</span>
             </label>
 
             {/* Posto Auto Gratuito */}
-            <label className="flex items-center gap-2.5 cursor-pointer text-xs text-[#3b342e] hover:text-[#1e382b]">
+            <label className="flex items-center gap-2.5 cursor-pointer text-xs text-[#3b342e] hover:text-[#03624c]">
               <input
                 type="checkbox"
                 checked={needParking}
                 onChange={(e) => setNeedParking(e.target.checked)}
-                className="w-4 h-4 rounded text-[#2d4a3e] focus:ring-[#2d4a3e] accent-[#2d4a3e]"
+                className="w-4 h-4 rounded text-[#03624c] focus:ring-[#03624c] accent-[#03624c]"
               />
-              <Car className="w-4 h-4 text-emerald-700 shrink-0" />
-              <span className="font-semibold text-[#1e3a2f]">{t.bookingModal.parkingOption}</span>
+              <Car className="w-4 h-4 text-[#03624c] shrink-0" />
+              <span className="font-semibold text-[#03624c]">{t.bookingModal.parkingOption}</span>
             </label>
           </div>
 
@@ -185,7 +185,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                 placeholder="Mario Rossi"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs sm:text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2d4a3e]"
+                className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs sm:text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#03624c]"
               />
             </div>
 
@@ -198,7 +198,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                 placeholder="+39 333 ..."
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs sm:text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2d4a3e]"
+                className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs sm:text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#03624c]"
               />
             </div>
           </div>
@@ -213,7 +213,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
               placeholder="Orario stimato di arrivo o richieste speciali..."
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2d4a3e]"
+              className="w-full px-3 py-2 rounded-xl border border-[#d6cbbe] text-xs bg-white focus:outline-hidden focus:ring-2 focus:ring-[#03624c]"
             />
           </div>
 
@@ -221,7 +221,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
           <div className="pt-2 flex flex-col gap-2.5">
             <button
               type="submit"
-              className="cursor-pointer w-full py-3.5 px-6 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+              className="cursor-pointer w-full py-3.5 px-6 rounded-full bg-[#03624c] hover:bg-[#024d3c] text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
             >
               <MessageCircle className="w-4 h-4" />
               <span>{t.bookingModal.sendWhatsApp}</span>
@@ -229,7 +229,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
 
             <a
               href={`tel:${t.brand.phone.replace(/\s+/g, '')}`}
-              className="w-full py-2.5 px-6 rounded-full bg-white hover:bg-[#f6f2ea] border border-[#d6cbbe] text-[#2d4a3e] font-semibold text-xs text-center transition-colors flex items-center justify-center gap-2"
+              className="w-full py-2.5 px-6 rounded-full bg-white hover:bg-[#f6f2ea] border border-[#d6cbbe] text-[#03624c] font-semibold text-xs text-center transition-colors flex items-center justify-center gap-2"
             >
               <Phone className="w-3.5 h-3.5" />
               <span>Oppure Chiama: {t.brand.phone}</span>

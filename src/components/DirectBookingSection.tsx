@@ -13,7 +13,7 @@ export const DirectBookingSection: React.FC<DirectBookingSectionProps> = ({ onOp
     <section className="py-20 lg:py-28 bg-gradient-to-b from-[#faf8f5] to-[#f4eee3] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="bg-[#1f382d] rounded-3xl p-8 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden border border-[#2d4a3e]">
+        <div className="bg-[#03624c] rounded-3xl p-8 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden border border-[#024d3c]">
           {/* Subtle floral/leaf watermark decoration */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#c8a97e]/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -56,7 +56,7 @@ export const DirectBookingSection: React.FC<DirectBookingSectionProps> = ({ onOp
                 <button
                   type="button"
                   onClick={onOpenBooking}
-                  className="cursor-pointer inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#f7e0bc] text-[#1a3327] text-xs sm:text-sm uppercase tracking-widest font-bold hover:bg-[#ebd0a6] transition-all duration-300 shadow-md hover:scale-102"
+                  className="cursor-pointer inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#f7e0bc] text-[#03624c] text-xs sm:text-sm uppercase tracking-widest font-bold hover:bg-[#ebd0a6] transition-all duration-300 shadow-md hover:scale-102"
                 >
                   <Sparkles className="w-4 h-4 text-[#9f3757]" />
                   <span>Richiedi Disponibilità</span>

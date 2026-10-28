@@ -14,7 +14,7 @@ export function AppContent() {
   const [showGate, setShowGate] = useState(true);
 
   return (
-    <div className="min-h-screen bg-[#fbf9f5] text-[#1c2420] flex flex-col font-sans selection:bg-[#2d4a3e] selection:text-white relative">
+    <div className="min-h-screen bg-[#fbf9f5] text-[#1c2420] flex flex-col font-sans selection:bg-[#03624c] selection:text-white relative">
       
       {/* Intro Gate Animation con Logo */}
       {showGate && <GateAnimation onComplete={() => setShowGate(false)} />}
@@ -73,7 +73,7 @@ export function AppContent() {
         <button
           type="button"
           onClick={() => setIsBookingOpen(true)}
-          className="cursor-pointer flex-1 py-3 px-3 rounded-xl bg-[#1e382b] hover:bg-[#152a20] text-white text-[11px] uppercase tracking-wider font-semibold transition-colors flex items-center justify-center gap-1.5 shadow-xs"
+          className="cursor-pointer flex-1 py-3 px-3 rounded-xl bg-[#03624c] hover:bg-[#024d3c] text-white text-[11px] uppercase tracking-wider font-semibold transition-colors flex items-center justify-center gap-1.5 shadow-xs"
         >
           <Sparkles className="w-3.5 h-3.5 text-[#e6cfab]" />
           <span>Disponibilità</span>

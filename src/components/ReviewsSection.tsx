@@ -11,7 +11,7 @@ export const ReviewsSection: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2d4a3e]/10 text-[#2d4a3e] text-xs font-semibold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#03624c]/10 text-[#03624c] text-xs font-semibold uppercase tracking-widest mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#c8a97e]" />
             <span>{t.reviews.badge}</span>
           </div>
@@ -24,7 +24,7 @@ export const ReviewsSection: React.FC = () => {
 
           {/* Booking Rating Box */}
           <div className="mt-8 inline-flex items-center gap-4 px-6 py-3.5 rounded-2xl bg-white border border-[#e5dcce] shadow-sm">
-            <div className="w-12 h-12 rounded-xl bg-[#2d4a3e] text-white flex items-center justify-center font-heading text-2xl font-bold">
+            <div className="w-12 h-12 rounded-xl bg-[#03624c] text-white flex items-center justify-center font-heading text-2xl font-bold">
               {t.reviews.ratingScore}
             </div>
             <div className="text-left">
@@ -32,7 +32,7 @@ export const ReviewsSection: React.FC = () => {
                 {t.reviews.ratingLabel}
               </div>
               <div className="text-xs text-[#736a5f] flex items-center gap-1">
-                <CheckCircle className="w-3.5 h-3.5 text-emerald-600" />
+                <CheckCircle className="w-3.5 h-3.5 text-[#03624c]" />
                 <span>{t.reviews.source} • 91+ recensioni</span>
               </div>
             </div>
@@ -46,7 +46,7 @@ export const ReviewsSection: React.FC = () => {
               key={idx}
               className="bg-white rounded-3xl p-7 sm:p-8 border border-[#e8dfd2] shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group relative"
             >
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-[#2d4a3e]/10 group-hover:text-[#2d4a3e]/20 transition-colors" />
+              <Quote className="absolute top-6 right-6 w-10 h-10 text-[#03624c]/10 group-hover:text-[#03624c]/20 transition-colors" />
 
               <div>
                 <div className="flex items-center gap-2 mb-3">
@@ -55,7 +55,7 @@ export const ReviewsSection: React.FC = () => {
                       <Star key={i} className="w-4 h-4 fill-amber-500" />
                     ))}
                   </div>
-                  <span className="text-xs font-bold text-[#2d4a3e]">
+                  <span className="text-xs font-bold text-[#03624c]">
                     {rev.rating}
                   </span>
                 </div>
@@ -88,7 +88,7 @@ export const ReviewsSection: React.FC = () => {
             href={t.brand.bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#2d4a3e] hover:text-[#9f3757] transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#03624c] hover:text-[#9f3757] transition-colors"
           >
             <span>Leggi tutte le 91+ recensioni su Booking.com</span>
             <ExternalLink className="w-3.5 h-3.5" />

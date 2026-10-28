@@ -24,7 +24,7 @@ export const AboutSection: React.FC = () => {
               </div>
 
               {/* Floating Quote Card */}
-              <div className="absolute -bottom-8 -right-4 sm:-right-8 bg-[#1f382d] text-white p-5 sm:p-6 rounded-3xl shadow-xl max-w-xs border border-[#2d4a3e]">
+              <div className="absolute -bottom-8 -right-4 sm:-right-8 bg-[#03624c] text-white p-5 sm:p-6 rounded-3xl shadow-xl max-w-xs border border-[#024d3c]">
                 <Quote className="w-6 h-6 text-[#d8c29d] mb-2" />
                 <p className="font-serif-italic text-xs sm:text-sm leading-relaxed text-[#ded8cb]">
                   "{t.about.quote}"
@@ -38,7 +38,7 @@ export const AboutSection: React.FC = () => {
 
           {/* Right Column: Narrative & Stats */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2d4a3e]/10 text-[#2d4a3e] text-xs font-semibold uppercase tracking-widest mb-4 self-start">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#03624c]/10 text-[#03624c] text-xs font-semibold uppercase tracking-widest mb-4 self-start">
               <Sparkles className="w-3.5 h-3.5 text-[#c8a97e]" />
               <span>{t.about.badge}</span>
             </div>
@@ -47,7 +47,7 @@ export const AboutSection: React.FC = () => {
               {t.about.title}
             </h2>
 
-            <p className="text-base sm:text-lg text-[#2d4a3e] font-serif-italic leading-relaxed mb-6 font-medium">
+            <p className="text-base sm:text-lg text-[#03624c] font-serif-italic leading-relaxed mb-6 font-medium">
               "{t.about.lead}"
             </p>
 
@@ -63,7 +63,7 @@ export const AboutSection: React.FC = () => {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-[#eee5d8]">
               {t.about.stats.map((stat, idx) => (
                 <div key={idx} className="bg-white p-3.5 rounded-2xl border border-[#e8dfd2] text-center">
-                  <div className="font-heading text-2xl sm:text-3xl font-bold text-[#2d4a3e]">
+                  <div className="font-heading text-2xl sm:text-3xl font-bold text-[#03624c]">
                     {stat.value}
                   </div>
                   <div className="text-[11px] text-[#73695e] mt-0.5 leading-tight font-sans">

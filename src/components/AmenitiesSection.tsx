@@ -6,14 +6,14 @@ export const AmenitiesSection: React.FC = () => {
   const { t } = useLanguage();
 
   const iconMap: Record<string, React.ReactNode> = {
-    Car: <Car className="w-5 h-5 text-[#2d4a3e]" />,
-    Trees: <Trees className="w-5 h-5 text-[#2d4a3e]" />,
-    Wind: <Wind className="w-5 h-5 text-[#2d4a3e]" />,
-    Wifi: <Wifi className="w-5 h-5 text-[#2d4a3e]" />,
-    UtensilsCrossed: <UtensilsCrossed className="w-5 h-5 text-[#2d4a3e]" />,
-    Baby: <Baby className="w-5 h-5 text-[#2d4a3e]" />,
-    Bath: <Bath className="w-5 h-5 text-[#2d4a3e]" />,
-    Key: <Key className="w-5 h-5 text-[#2d4a3e]" />,
+    Car: <Car className="w-5 h-5 text-[#03624c]" />,
+    Trees: <Trees className="w-5 h-5 text-[#03624c]" />,
+    Wind: <Wind className="w-5 h-5 text-[#03624c]" />,
+    Wifi: <Wifi className="w-5 h-5 text-[#03624c]" />,
+    UtensilsCrossed: <UtensilsCrossed className="w-5 h-5 text-[#03624c]" />,
+    Baby: <Baby className="w-5 h-5 text-[#03624c]" />,
+    Bath: <Bath className="w-5 h-5 text-[#03624c]" />,
+    Key: <Key className="w-5 h-5 text-[#03624c]" />,
   };
 
   return (
@@ -22,7 +22,7 @@ export const AmenitiesSection: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2d4a3e]/10 text-[#2d4a3e] text-xs font-semibold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#03624c]/10 text-[#03624c] text-xs font-semibold uppercase tracking-widest mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#c8a97e]" />
             <span>{t.amenities.badge}</span>
           </div>
@@ -39,9 +39,9 @@ export const AmenitiesSection: React.FC = () => {
           {t.amenities.list.map((amenity, idx) => (
             <div
               key={idx}
-              className="bg-white/90 backdrop-blur-xs rounded-2xl p-6 border border-[#e6decf] hover:border-[#2d4a3e]/40 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group"
+              className="bg-white/90 backdrop-blur-xs rounded-2xl p-6 border border-[#e6decf] hover:border-[#03624c]/40 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group"
             >
-              <div className="w-11 h-11 rounded-xl bg-[#2d4a3e]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <div className="w-11 h-11 rounded-xl bg-[#03624c]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 {iconMap[amenity.icon]}
               </div>
 

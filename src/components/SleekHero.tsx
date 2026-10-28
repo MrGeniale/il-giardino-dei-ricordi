@@ -135,7 +135,7 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
               <button
                 type="button"
                 onClick={onOpenBooking}
-                className="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl bg-[#2d4a3e] hover:bg-[#1e382b] text-white text-xs uppercase tracking-[0.16em] sm:tracking-[0.18em] font-semibold transition-all duration-300 shadow-xl hover:scale-102 border border-white/10"
+                className="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl bg-[#03624c] hover:bg-[#024d3c] text-white text-xs uppercase tracking-[0.16em] sm:tracking-[0.18em] font-semibold transition-all duration-300 shadow-xl hover:scale-102 border border-white/10"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#e6cfab]" />
                 <span>{isEn ? 'Check Availability' : 'Richiedi Disponibilità'}</span>
@@ -150,11 +150,11 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4 mt-5 sm:mt-8">
           
           <div className="bg-[#faf8f5] p-3 sm:p-5 rounded-xl sm:rounded-2xl border border-[#ece4d6] flex items-center gap-2.5 sm:gap-3.5">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-emerald-700 shrink-0 shadow-2xs">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-[#03624c] shrink-0 shadow-2xs">
               <Car className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <div className="min-w-0">
-              <span className="text-[11px] sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block truncate">
+              <span className="text-[11px] sm:text-sm font-bold text-[#03624c] uppercase tracking-wider block truncate">
                 {isEn ? '2 Cars Free' : '2 Posti Auto'}
               </span>
               <span className="text-[10px] sm:text-xs text-[#71685e] block leading-tight">
@@ -178,11 +178,11 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
           </div>
 
           <div className="bg-[#faf8f5] p-3 sm:p-5 rounded-xl sm:rounded-2xl border border-[#ece4d6] flex items-center gap-2.5 sm:gap-3.5">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-emerald-700 shrink-0 shadow-2xs">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-[#03624c] shrink-0 shadow-2xs">
               <Bed className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <div className="min-w-0">
-              <span className="text-[11px] sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block truncate">
+              <span className="text-[11px] sm:text-sm font-bold text-[#03624c] uppercase tracking-wider block truncate">
                 {isEn ? '4 Guests' : '4 Posti Letto'}
               </span>
               <span className="text-[10px] sm:text-xs text-[#71685e] block leading-tight">
@@ -192,11 +192,11 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
           </div>
 
           <div className="bg-[#faf8f5] p-3 sm:p-5 rounded-xl sm:rounded-2xl border border-[#ece4d6] flex items-center gap-2.5 sm:gap-3.5">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-emerald-700 shrink-0 shadow-2xs">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-[#dfd5c3] flex items-center justify-center text-[#03624c] shrink-0 shadow-2xs">
               <Trees className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <div className="min-w-0">
-              <span className="text-[11px] sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block truncate">
+              <span className="text-[11px] sm:text-sm font-bold text-[#03624c] uppercase tracking-wider block truncate">
                 {isEn ? 'Private Garden' : 'Giardino Privato'}
               </span>
               <span className="text-[10px] sm:text-xs text-[#71685e] block leading-tight">
@@ -214,39 +214,39 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-[#685e54] mb-1.5 flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#2d4a3e]" />
+                  <Calendar className="w-3.5 h-3.5 text-[#03624c]" />
                   <span>{isEn ? 'Check-in Date' : 'Data di Arrivo'}</span>
                 </label>
                 <input
                   type="date"
                   value={checkIn}
                   onChange={(e) => setCheckIn(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#2d4a3e] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#03624c] focus:outline-hidden"
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-[#685e54] mb-1.5 flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#2d4a3e]" />
+                  <Calendar className="w-3.5 h-3.5 text-[#03624c]" />
                   <span>{isEn ? 'Check-out Date' : 'Data di Partenza'}</span>
                 </label>
                 <input
                   type="date"
                   value={checkOut}
                   onChange={(e) => setCheckOut(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#2d4a3e] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#03624c] focus:outline-hidden"
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-[#685e54] mb-1.5 flex items-center gap-1.5">
-                  <Users className="w-3.5 h-3.5 text-[#2d4a3e]" />
+                  <Users className="w-3.5 h-3.5 text-[#03624c]" />
                   <span>{isEn ? 'Guests' : 'Ospiti'}</span>
                 </label>
                 <select
                   value={guests}
                   onChange={(e) => setGuests(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#2d4a3e] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#d6ccbd] text-xs sm:text-sm text-[#1e3329] bg-white focus:ring-2 focus:ring-[#03624c] focus:outline-hidden"
                 >
                   <option value={isEn ? "1 Guest" : "1 Ospite"}>{isEn ? '1 Guest' : '1 Ospite'}</option>
                   <option value={isEn ? "2 Guests" : "2 Ospiti"}>{isEn ? '2 Guests' : '2 Ospiti'}</option>
@@ -265,25 +265,25 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
                   {isEn ? 'Options on request:' : 'Opzioni su richiesta:'}
                 </span>
 
-                <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-[#2b241e] font-medium hover:text-[#1e382b] select-none">
+                <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-[#2b241e] font-medium hover:text-[#03624c] select-none">
                   <input
                     type="checkbox"
                     checked={needCot}
                     onChange={(e) => setNeedCot(e.target.checked)}
-                    className="w-4 h-4 rounded text-[#2d4a3e] border-[#c8beaf] focus:ring-[#2d4a3e] accent-[#2d4a3e] cursor-pointer"
+                    className="w-4 h-4 rounded text-[#03624c] border-[#c8beaf] focus:ring-[#03624c] accent-[#03624c] cursor-pointer"
                   />
                   <Baby className="w-3.5 h-3.5 text-amber-600 shrink-0" />
                   <span>{isEn ? 'Baby cot (0-3 yrs)' : 'Culla bebè (0-3 anni)'}</span>
                 </label>
 
-                <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-[#2b241e] font-medium hover:text-[#1e382b] select-none">
+                <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-[#2b241e] font-medium hover:text-[#03624c] select-none">
                   <input
                     type="checkbox"
                     checked={needExtraBed}
                     onChange={(e) => setNeedExtraBed(e.target.checked)}
-                    className="w-4 h-4 rounded text-[#2d4a3e] border-[#c8beaf] focus:ring-[#2d4a3e] accent-[#2d4a3e] cursor-pointer"
+                    className="w-4 h-4 rounded text-[#03624c] border-[#c8beaf] focus:ring-[#03624c] accent-[#03624c] cursor-pointer"
                   />
-                  <Bed className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
+                  <Bed className="w-3.5 h-3.5 text-[#03624c] shrink-0" />
                   <span>{isEn ? 'Extra single bed' : 'Letto singolo extra'}</span>
                 </label>
               </div>
@@ -292,7 +292,7 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
               <div className="w-full md:w-auto shrink-0">
                 <button
                   type="submit"
-                  className="cursor-pointer w-full md:w-auto py-3 px-6 rounded-xl bg-[#1e382b] hover:bg-[#152a20] text-white text-xs sm:text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 shadow-sm hover:shadow-md"
+                  className="cursor-pointer w-full md:w-auto py-3 px-6 rounded-xl bg-[#03624c] hover:bg-[#024d3c] text-white text-xs sm:text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 shadow-sm hover:shadow-md"
                 >
                   <MessageCircle className="w-4 h-4 text-emerald-400" />
                   <span>{isEn ? 'Inquire via WhatsApp' : 'Verifica su WhatsApp'}</span>
@@ -305,7 +305,7 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
 
           <div className="flex flex-wrap items-center justify-between gap-3 mt-4 pt-3.5 border-t border-[#e8dfd2] text-xs text-[#71685e]">
             <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[#03624c] shrink-0" />
               <span>{isEn ? 'Direct booking with host Marilena Liuzzi • Best rate guaranteed' : 'Prenotazione diretta con Marilena Liuzzi • Miglior prezzo garantito senza intermediari'}</span>
             </div>
 
@@ -313,7 +313,7 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
               href={`https://wa.me/${t.brand.phoneRaw}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-[#1e382b] hover:text-emerald-700 transition-colors underline decoration-[#1e382b]/30"
+              className="font-medium text-[#03624c] hover:text-[#024d3c] transition-colors underline decoration-[#03624c]/30"
             >
               {t.brand.phone}
             </a>

@@ -71,7 +71,7 @@ export const FilmProposal: React.FC<FilmProposalProps> = ({ onOpenBooking }) => 
           Una Giornata Ideale ad Alberobello
         </span>
         <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl text-[#172e24] font-light leading-tight mb-6">
-          Vivi il tuo soggiorno come una storia <span className="font-serif italic font-normal text-[#2a4f3d]">senza pensieri</span>.
+          Vivi il tuo soggiorno come una storia <span className="font-serif italic font-normal text-[#03624c]">senza pensieri</span>.
         </h2>
         <p className="text-base sm:text-lg text-[#665e55] font-sans font-light max-w-2xl mx-auto leading-relaxed">
           Non un semplice affittacamere, ma il racconto della tua vacanza perfetta: ecco come si svolge una tipica giornata a Il Giardino dei Ricordi.
@@ -120,7 +120,7 @@ export const FilmProposal: React.FC<FilmProposalProps> = ({ onOpenBooking }) => 
                   {chap.title}
                 </h3>
 
-                <p className="font-serif italic text-base text-[#2a4f3d] mb-4">
+                <p className="font-serif italic text-base text-[#03624c] mb-4">
                   {chap.subtitle}
                 </p>
 
@@ -128,7 +128,7 @@ export const FilmProposal: React.FC<FilmProposalProps> = ({ onOpenBooking }) => 
                   {chap.desc}
                 </p>
 
-                <div className="p-3.5 rounded-2xl bg-white border border-[#e8dfd2] text-xs text-[#2a4f3d] font-medium flex items-center gap-2">
+                <div className="p-3.5 rounded-2xl bg-white border border-[#e8dfd2] text-xs text-[#03624c] font-medium flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-[#c8a97e] shrink-0" />
                   <span>{chap.highlight}</span>
                 </div>
@@ -139,7 +139,7 @@ export const FilmProposal: React.FC<FilmProposalProps> = ({ onOpenBooking }) => 
       </div>
 
       {/* Scheda Tecnica e Servizi Completi (Senza fronzoli) */}
-      <section className="bg-[#172e24] text-white py-20 px-4 sm:px-6 lg:px-12">
+      <section className="bg-[#03624c] text-white py-20 px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -205,7 +205,7 @@ export const FilmProposal: React.FC<FilmProposalProps> = ({ onOpenBooking }) => 
           <button
             type="button"
             onClick={onOpenBooking}
-            className="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#172e24] text-white text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#254838] transition-all shadow-lg"
+            className="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#03624c] text-white text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#024d3c] transition-all shadow-lg"
           >
             <Sparkles className="w-4 h-4 text-[#e6cfab]" />
             <span>Richiedi Disponibilità</span>

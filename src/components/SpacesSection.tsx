@@ -25,7 +25,7 @@ export const SpacesSection: React.FC<SpacesSectionProps> = ({ onOpenBooking }) =
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2d4a3e]/10 text-[#2d4a3e] text-xs font-semibold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#03624c]/10 text-[#03624c] text-xs font-semibold uppercase tracking-widest mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#c8a97e]" />
             <span>{t.spaces.badge}</span>
           </div>
@@ -46,8 +46,8 @@ export const SpacesSection: React.FC<SpacesSectionProps> = ({ onOpenBooking }) =
               onClick={() => setActiveTab(idx)}
               className={`cursor-pointer inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
                 activeTab === idx
-                  ? 'bg-[#2d4a3e] text-white shadow-md scale-105'
-                  : 'bg-white text-[#524b43] border border-[#e5dcce] hover:border-[#2d4a3e]/40 hover:bg-[#f6f2ea]'
+                  ? 'bg-[#03624c] text-white shadow-md scale-105'
+                  : 'bg-white text-[#524b43] border border-[#e5dcce] hover:border-[#03624c]/40 hover:bg-[#f6f2ea]'
               }`}
             >
               <span>{tabIcons[idx]}</span>
@@ -98,8 +98,8 @@ export const SpacesSection: React.FC<SpacesSectionProps> = ({ onOpenBooking }) =
                     Caratteristiche & Dotazioni:
                   </h4>
                   {currentSpace.features.map((feat, fIdx) => (
-                    <div key={fIdx} className="flex items-center gap-2.5 text-xs sm:text-sm text-[#2d4a3e]">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <div key={fIdx} className="flex items-center gap-2.5 text-xs sm:text-sm text-[#03624c]">
+                      <CheckCircle2 className="w-4 h-4 text-[#03624c] shrink-0" />
                       <span>{feat}</span>
                     </div>
                   ))}
@@ -113,7 +113,7 @@ export const SpacesSection: React.FC<SpacesSectionProps> = ({ onOpenBooking }) =
                 <button
                   type="button"
                   onClick={onOpenBooking}
-                  className="cursor-pointer inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#2d4a3e] text-white text-xs uppercase tracking-wider font-semibold hover:bg-[#1a3026] transition-colors"
+                  className="cursor-pointer inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#03624c] text-white text-xs uppercase tracking-wider font-semibold hover:bg-[#024d3c] transition-colors"
                 >
                   <span>Prenota</span>
                   <ChevronRight className="w-3.5 h-3.5 text-[#d8c29d]" />

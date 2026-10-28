@@ -10,9 +10,9 @@ export const GardenOasisSection: React.FC<GardenOasisSectionProps> = ({ onOpenBo
   const { t } = useLanguage();
 
   const highlightIcons = [
-    <Utensils className="w-5 h-5 text-[#2d4a3e]" />,
-    <Sun className="w-5 h-5 text-[#2d4a3e]" />,
-    <Moon className="w-5 h-5 text-[#2d4a3e]" />,
+    <Utensils className="w-5 h-5 text-[#03624c]" />,
+    <Sun className="w-5 h-5 text-[#03624c]" />,
+    <Moon className="w-5 h-5 text-[#03624c]" />,
   ];
 
   return (
@@ -57,8 +57,8 @@ export const GardenOasisSection: React.FC<GardenOasisSectionProps> = ({ onOpenBo
 
           {/* Right Column: Story & Highlights */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2d4a3e]/10 text-[#2d4a3e] text-xs font-semibold uppercase tracking-widest mb-4 self-start">
-              <Trees className="w-3.5 h-3.5 text-[#2d4a3e]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#03624c]/10 text-[#03624c] text-xs font-semibold uppercase tracking-widest mb-4 self-start">
+              <Trees className="w-3.5 h-3.5 text-[#03624c]" />
               <span>{t.garden.badge}</span>
             </div>
 
@@ -78,7 +78,7 @@ export const GardenOasisSection: React.FC<GardenOasisSectionProps> = ({ onOpenBo
             <div className="space-y-4 mb-8">
               {t.garden.highlights.map((item, idx) => (
                 <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-white/80 border border-[#e8dfd2]">
-                  <div className="w-10 h-10 rounded-xl bg-[#2d4a3e]/10 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-[#03624c]/10 flex items-center justify-center shrink-0">
                     {highlightIcons[idx]}
                   </div>
                   <div>
@@ -98,7 +98,7 @@ export const GardenOasisSection: React.FC<GardenOasisSectionProps> = ({ onOpenBo
               <button
                 type="button"
                 onClick={onOpenBooking}
-                className="cursor-pointer inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#2d4a3e] text-white text-xs uppercase tracking-widest font-semibold hover:bg-[#1a3026] transition-all shadow-md hover:shadow-lg"
+                className="cursor-pointer inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#03624c] text-white text-xs uppercase tracking-widest font-semibold hover:bg-[#024d3c] transition-all shadow-md hover:shadow-lg"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#d8c29d]" />
                 <span>Prenota il tuo Soggiorno nel Giardino</span>

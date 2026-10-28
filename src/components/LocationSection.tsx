@@ -11,7 +11,7 @@ export const LocationSection: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2d4a3e]/10 text-[#2d4a3e] text-xs font-semibold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#03624c]/10 text-[#03624c] text-xs font-semibold uppercase tracking-widest mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#c8a97e]" />
             <span>{t.location.badge}</span>
           </div>
@@ -29,8 +29,8 @@ export const LocationSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-4">
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#e8dfd2] shadow-sm mb-6">
               <div className="flex items-start gap-3.5 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-[#2d4a3e]/10 flex items-center justify-center shrink-0">
-                  <Navigation className="w-5 h-5 text-[#2d4a3e]" />
+                <div className="w-10 h-10 rounded-xl bg-[#03624c]/10 flex items-center justify-center shrink-0">
+                  <Navigation className="w-5 h-5 text-[#03624c]" />
                 </div>
                 <div>
                   <h3 className="font-heading text-xl font-semibold text-[#1e3329]">
@@ -42,7 +42,7 @@ export const LocationSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 text-xs font-semibold text-[#2d4a3e] bg-[#2d4a3e]/5 p-3 rounded-xl border border-[#2d4a3e]/15">
+              <div className="flex items-center gap-2 text-xs font-semibold text-[#03624c] bg-[#03624c]/5 p-3 rounded-xl border border-[#03624c]/15">
                 <MapPin className="w-4 h-4 shrink-0 text-[#9f3757]" />
                 <span>{t.location.address}</span>
               </div>
@@ -52,10 +52,10 @@ export const LocationSection: React.FC = () => {
               {t.location.places.map((place, idx) => (
                 <div
                   key={idx}
-                  className="bg-white/95 rounded-2xl p-4 border border-[#e8dfd2] hover:border-[#2d4a3e]/40 transition-all shadow-2xs hover:shadow-sm"
+                  className="bg-white/95 rounded-2xl p-4 border border-[#e8dfd2] hover:border-[#03624c]/40 transition-all shadow-2xs hover:shadow-sm"
                 >
                   <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs font-bold text-[#2d4a3e] flex items-center gap-1">
+                    <span className="text-xs font-bold text-[#03624c] flex items-center gap-1">
                       <Clock className="w-3.5 h-3.5 text-[#9f3757]" />
                       <span>{place.time}</span>
                     </span>
@@ -79,7 +79,7 @@ export const LocationSection: React.FC = () => {
                 href="https://www.google.com/maps/search/?api=1&query=Via+Capitano+V.+di+Mola+35+Alberobello"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#2d4a3e] text-white text-xs uppercase tracking-widest font-semibold hover:bg-[#1a3026] transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#03624c] text-white text-xs uppercase tracking-widest font-semibold hover:bg-[#024d3c] transition-colors shadow-sm"
               >
                 <span>{t.location.openInMaps}</span>
                 <ExternalLink className="w-3.5 h-3.5 text-[#d8c29d]" />

@@ -10,10 +10,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-[#172e24] text-[#d6cebf] pt-16 pb-12 border-t border-[#234234]">
+    <footer className="bg-[#03624c] text-[#d6cebf] pt-16 pb-12 border-t border-[#024d3c]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#244537]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#024d3c]">
           
           {/* Brand & Presentation */}
           <div className="lg:col-span-5">

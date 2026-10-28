@@ -14,7 +14,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
     <div className="bg-[#fbf9f5] text-[#1c2420] overflow-hidden">
       
       {/* 1. Nastro Editoriale Continuo (Editorial Marquee Ticker) */}
-      <div className="bg-[#172e24] text-[#f7e0bc] py-3.5 border-y border-[#29483b] overflow-hidden select-none">
+      <div className="bg-[#03624c] text-[#f7e0bc] py-3.5 border-y border-[#024d3c] overflow-hidden select-none">
         <div className="flex whitespace-nowrap animate-marquee gap-8 text-[11px] uppercase tracking-[0.28em] font-medium">
           <span>{isEn ? '★ 9.7 on Booking.com (Exceptional)' : '★ 9.7 su Booking.com (Eccezionale)'}</span>
           <span className="text-[#c8a97e]">•</span>
@@ -82,9 +82,9 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
             
             <h2 className="font-heading text-2xl xs:text-3xl sm:text-5xl lg:text-6xl text-[#172e24] leading-[1.12] mb-5 sm:mb-8 font-light">
               {isEn ? (
-                <>The privilege of living central, with the breath of a <span className="font-serif italic font-normal text-[#2a4f3d]">true private oasis</span>.</>
+                <>The privilege of living central, with the breath of a <span className="font-serif italic font-normal text-[#03624c]">true private oasis</span>.</>
               ) : (
-                <>Il privilegio di vivere il centro, con il respiro di una <span className="font-serif italic font-normal text-[#2a4f3d]">vera oasi privata</span>.</>
+                <>Il privilegio di vivere il centro, con il respiro di una <span className="font-serif italic font-normal text-[#03624c]">vera oasi privata</span>.</>
               )}
             </h2>
 
@@ -193,7 +193,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                 <p className="text-sm sm:text-base text-[#5a5247] font-light leading-relaxed mb-6 font-sans">
                   {isEn ? 'Bright and spacious bedroom with antique dresser, carved vanity mirror, king-size bed, underfloor heating, and space for baby cot.' : 'Camera spaziosa e luminosa con comò d\'epoca, specchiera intagliata, letto matrimoniale king size, riscaldamento a pavimento e possibilità di aggiungere culla per neonati.'}
                 </p>
-                <div className="text-xs text-[#2a4f3d] font-semibold tracking-wider uppercase border-l-2 border-[#2a4f3d] pl-3 py-1">
+                <div className="text-xs text-[#03624c] font-semibold tracking-wider uppercase border-l-2 border-[#03624c] pl-3 py-1">
                   {isEn ? 'King Size • Antique Vanity • Underfloor Heating • Bright Window' : 'King Size • Specchiera Antica • Riscaldamento a Pavimento • Finestra Luminosa'}
                 </div>
               </div>
@@ -211,7 +211,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                 <p className="text-sm sm:text-base text-[#5a5247] font-light leading-relaxed mb-6 font-sans">
                   {isEn ? 'Furnished in light oak, generous three-door wardrobe, and polished stone flooring with underfloor heating. A relaxing, quiet, and comfortable space.' : 'Rifinita con arredi in rovere chiaro, grande armadio a tre ante e pavimento in pietra levigata con riscaldamento a pavimento. Uno spazio rilassante, confortevole e silenzioso.'}
                 </p>
-                <div className="text-xs text-[#2a4f3d] font-semibold tracking-wider uppercase border-l-2 border-[#2a4f3d] pl-3 py-1">
+                <div className="text-xs text-[#03624c] font-semibold tracking-wider uppercase border-l-2 border-[#03624c] pl-3 py-1">
                   {isEn ? 'Double Bed • Light Oak • Large Wardrobe • Underfloor Heating' : 'Letto Matrimoniale • Rovere Chiaro • Armadio Capiente • Riscaldamento a Pavimento'}
                 </div>
               </div>
@@ -288,9 +288,9 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
             </span>
             <h2 className="font-heading text-2xl xs:text-3xl sm:text-5xl text-[#172e24] leading-tight mb-4 sm:mb-6 font-light">
               {isEn ? (
-                <>The private garden that gives name to your <span className="font-serif italic font-normal text-[#2a4f3d]">dearest memories</span></>
+                <>The private garden that gives name to your <span className="font-serif italic font-normal text-[#03624c]">dearest memories</span></>
               ) : (
-                <>Il Giardino privato che dà il nome ai tuoi <span className="font-serif italic font-normal text-[#2a4f3d]">ricordi migliori</span></>
+                <>Il Giardino privato che dà il nome ai tuoi <span className="font-serif italic font-normal text-[#03624c]">ricordi migliori</span></>
               )}
             </h2>
             <p className="text-sm sm:text-lg text-[#524b43] font-light leading-relaxed mb-4 sm:mb-6 font-sans">
@@ -343,7 +343,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
       </section>
 
       {/* 5. Il Parcheggio Privato: Una Rarità ad Alberobello */}
-      <section className="bg-[#172e24] text-white py-16 sm:py-28 px-4 sm:px-6 lg:px-12 relative overflow-hidden">
+      <section className="bg-[#03624c] text-white py-16 sm:py-28 px-4 sm:px-6 lg:px-12 relative overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           <div className="lg:col-span-7">
@@ -462,7 +462,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
               href={t.brand.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-[#2a4f3d] hover:text-[#9f3757] transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-[#03624c] hover:text-[#9f3757] transition-colors"
             >
               <span>{isEn ? 'Verified on Booking.com (91+ reviews)' : 'Verificato su Booking.com (91+ recensioni)'}</span>
               <ExternalLink className="w-3.5 h-3.5" />
@@ -515,7 +515,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                 <div>
                   <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#f0eae0]">
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#1e382b] text-[#f7e0bc] font-bold text-xs sm:text-sm flex items-center justify-center font-heading">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#03624c] text-[#f7e0bc] font-bold text-xs sm:text-sm flex items-center justify-center font-heading">
                         {rev.author.charAt(0)}
                       </div>
                       <div>
@@ -533,7 +533,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                     </div>
                   </div>
 
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#2d4a3e] block mb-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#03624c] block mb-2">
                     ★ {rev.title}
                   </span>
 
@@ -544,7 +544,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
 
                 <div className="text-[10px] sm:text-[11px] font-medium text-[#7a7064] pt-3 border-t border-[#f4ede3] flex items-center justify-between">
                   <span>{isEn ? 'Verified on Booking.com' : 'Recensione verificata Booking.com'}</span>
-                  <span className="text-emerald-700 font-bold">10 / 10</span>
+                  <span className="text-[#03624c] font-bold">10 / 10</span>
                 </div>
               </div>
             ))}
@@ -569,7 +569,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
           <button
             type="button"
             onClick={onOpenBooking}
-            className="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#172e24] text-white text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#254838] transition-all shadow-lg hover:scale-102"
+            className="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#03624c] text-white text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#024d3c] transition-all shadow-lg hover:scale-102"
           >
             <Sparkles className="w-4 h-4 text-[#e6cfab]" />
             <span>{isEn ? 'Check Availability' : 'Richiedi Disponibilità'}</span>

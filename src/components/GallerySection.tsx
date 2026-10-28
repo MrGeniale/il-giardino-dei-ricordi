@@ -74,7 +74,7 @@ export const GallerySection: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2d4a3e]/10 text-[#2d4a3e] text-xs font-semibold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#03624c]/10 text-[#03624c] text-xs font-semibold uppercase tracking-widest mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#c8a97e]" />
             <span>{t.gallery.badge}</span>
           </div>
@@ -101,8 +101,8 @@ export const GallerySection: React.FC = () => {
               onClick={() => setFilter(cat.id as any)}
               className={`cursor-pointer px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
                 filter === cat.id
-                  ? 'bg-[#2d4a3e] text-white shadow-sm'
-                  : 'bg-white text-[#554d45] border border-[#e5dcce] hover:border-[#2d4a3e]/40'
+                  ? 'bg-[#03624c] text-white shadow-sm'
+                  : 'bg-white text-[#554d45] border border-[#e5dcce] hover:border-[#03624c]/40'
               }`}
             >
               {cat.label}
@@ -125,7 +125,7 @@ export const GallerySection: React.FC = () => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-[#2d4a3e] shadow-lg transform scale-75 group-hover:scale-100 transition-transform">
+                <div className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-[#03624c] shadow-lg transform scale-75 group-hover:scale-100 transition-transform">
                   <Eye className="w-5 h-5" />
                 </div>
               </div>
