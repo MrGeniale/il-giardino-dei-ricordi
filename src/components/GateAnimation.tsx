@@ -28,7 +28,7 @@ export const GateAnimation: React.FC<GateAnimationProps> = ({ onComplete }) => {
         <div className="relative">
           <div className="absolute -inset-4 rounded-full bg-[#c8a97e]/20 blur-xl animate-pulse" />
           <img
-            src="/images/logo-badge.png"
+            src="/images/logo-nav.png"
             alt="Il Giardino dei Ricordi"
             className="h-28 sm:h-36 md:h-44 w-auto object-contain rounded-full shadow-[0_10px_45px_rgba(0,0,0,0.8)] border border-[#c8a97e]/40 relative z-10"
           />

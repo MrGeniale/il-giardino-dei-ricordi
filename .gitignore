@@ -29,7 +29,7 @@ Thumbs.db
 # Raw DSLR high-res photoshoot assets (production-ready web images are in public/images)
 /image/
 /thumbs/
-logo il giardino dei ricordi .jpeg
-logo-badge.png
-logo-transparent.png
+/logo il giardino dei ricordi .jpeg
+/logo-badge.png
+/logo-transparent.png
 .vercel

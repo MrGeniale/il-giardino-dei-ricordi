@@ -55,7 +55,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
             {/* Logo & Brand Name */}
             <a href="#" className="flex items-center gap-2 sm:gap-3 shrink-0 min-w-0 group">
               <img
-                src="/images/logo-badge.png"
+                src="/images/logo-nav.png"
                 alt="Logo Il Giardino dei Ricordi"
                 className="w-9 h-9 sm:w-11 sm:h-11 object-contain rounded-full border border-[#c8a97e]/60 shadow-xs group-hover:scale-105 transition-transform shrink-0"
               />
@@ -163,7 +163,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
         <div className="flex items-center justify-between px-6 sm:px-10 py-6 border-b border-[#ece2d3]">
           <div className="flex items-center gap-3">
             <img
-              src="/images/logo-badge.png"
+              src="/images/logo-nav.png"
               alt="Logo"
               className="w-10 h-10 object-contain rounded-full border border-[#c8a97e]/60 shadow-2xs"
             />
