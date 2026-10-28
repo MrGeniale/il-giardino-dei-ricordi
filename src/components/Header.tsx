@@ -9,14 +9,11 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
   const { t, language, setLanguage } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showNav, setShowNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const y = window.scrollY;
-      setIsScrolled(y > 20);
-      setShowNav(y > 420); // Compare solo dopo aver superato la Hero e arrivando alla sezione 'La quiete rara di Alberobello'
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -48,15 +45,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#faf7f2]/95 backdrop-blur-md py-2.5 sm:py-3 border-b border-[#e5dac9] shadow-md'
-            : 'bg-[#faf7f2]/92 backdrop-blur-xs py-3 sm:py-4 border-b border-[#ece2d3]'
+            ? 'bg-[#faf7f2] py-2.5 sm:py-3 border-b border-[#e5dac9] shadow-sm'
+            : 'bg-[#faf7f2]/95 backdrop-blur-xs py-3 sm:py-4 border-b border-[#ece2d3]'
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-2 sm:gap-4">
+          <div className="flex items-center justify-between gap-3 sm:gap-6">
             
             {/* Logo & Brand Name */}
-            <a href="#" className="flex items-center gap-2 sm:gap-3 shrink min-w-0 group">
+            <a href="#" className="flex items-center gap-2 sm:gap-3 shrink-0 min-w-0 group">
               <img
                 src="/images/logo-badge.png"
                 alt="Logo Il Giardino dei Ricordi"
@@ -72,19 +69,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               </div>
             </a>
 
-            {/* Desktop Navigation Links: Centrati in modo assoluto per NON spostare mai logo e controlli a destra */}
-            <nav
-              className={`hidden xl:flex items-center space-x-7 absolute left-1/2 -translate-x-1/2 transition-all duration-500 ease-out ${
-                showNav
-                  ? 'opacity-100 translate-y-0 pointer-events-auto'
-                  : 'opacity-0 -translate-y-2 pointer-events-none'
-              }`}
-            >
+            {/* Desktop Navigation Links: In flusso flex naturale, solo su 2xl (1536px+) per garantire zero sovrapposizioni su schermi laptop */}
+            <nav className="hidden 2xl:flex items-center gap-6">
               {navLinks.slice(0, 5).map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-xs uppercase tracking-[0.16em] text-[#33463d] hover:text-[#9f3757] font-medium transition-colors whitespace-nowrap"
+                  className="text-xs uppercase tracking-[0.16em] text-[#33463d] hover:text-[#03624c] font-medium transition-colors whitespace-nowrap"
                 >
                   {link.label}
                 </a>
@@ -128,7 +119,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               <button
                 type="button"
                 onClick={onOpenBooking}
-                className="cursor-pointer hidden sm:inline-flex items-center justify-center gap-1.5 py-2 w-[170px] sm:w-[215px] rounded-full bg-[#03624c] hover:bg-[#024d3c] text-white text-[10px] sm:text-xs uppercase tracking-[0.14em] font-semibold transition-colors duration-200 shadow-sm hover:shadow shrink-0"
+                className="cursor-pointer hidden sm:inline-flex items-center justify-center gap-1.5 py-2 px-4 sm:px-5 rounded-full bg-[#03624c] hover:bg-[#024d3c] text-white text-[10px] sm:text-xs uppercase tracking-[0.14em] font-semibold transition-colors duration-200 shadow-sm hover:shadow shrink-0"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#e6cfab] shrink-0" />
                 <span className="truncate">{language === 'en' ? 'Check Availability' : 'Richiedi Disponibilità'}</span>
