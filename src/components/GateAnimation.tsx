@@ -12,10 +12,10 @@ export const GateAnimation: React.FC<GateAnimationProps> = ({ onComplete }) => {
       animate={{ opacity: 0 }}
       transition={{ duration: 1.1, delay: 2.2, ease: [0.65, 0, 0.35, 1] }}
       onAnimationComplete={onComplete}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#08120d] select-none pointer-events-none"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[#01261e] select-none pointer-events-none"
     >
-      {/* Deep Emerald / Night Vignette */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#183325_0%,#050d09_100%)]" />
+      {/* Brand Emerald Vignette with #03624c */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#03624c_0%,#01261e_100%)]" />
 
       {/* Central Logo & Intro Details */}
       <motion.div
@@ -26,11 +26,11 @@ export const GateAnimation: React.FC<GateAnimationProps> = ({ onComplete }) => {
       >
         {/* Monogram / Logo Badge */}
         <div className="relative">
-          <div className="absolute -inset-4 rounded-full bg-[#c8a97e]/20 blur-xl animate-pulse" />
+          <div className="absolute -inset-6 rounded-full bg-[#03624c]/40 blur-2xl animate-pulse" />
           <img
             src="/images/logo-nav.png"
             alt="Il Giardino dei Ricordi"
-            className="h-28 sm:h-36 md:h-44 w-auto object-contain rounded-full shadow-[0_10px_45px_rgba(0,0,0,0.8)] border border-[#c8a97e]/40 relative z-10"
+            className="h-28 sm:h-36 md:h-44 w-auto object-contain rounded-full shadow-[0_10px_45px_rgba(0,0,0,0.8)] border border-[#d8be96]/50 relative z-10 bg-white/95 p-1"
           />
         </div>
 
