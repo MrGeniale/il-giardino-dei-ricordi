@@ -11,7 +11,7 @@ export const QuickBookingBar: React.FC = () => {
 
   const handleQuickCheck = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Buongiorno Marilena, vorrei verificare la disponibilità a Il Giardino dei Ricordi ad Alberobello:\n- Date: dal ${checkIn || 'da concordare'} al ${checkOut || 'da concordare'}\n- Ospiti: ${guests}${needParking ? '\n- Richiedo posto auto gratuito (fino a 3 posti)' : ''}\nPotete confermarmi la disponibilità per queste date? Grazie!`;
+    const message = `Buongiorno Marilena, vorrei verificare la disponibilità a Il Giardino dei Ricordi ad Alberobello:\n- Date: dal ${checkIn || 'da concordare'} al ${checkOut || 'da concordare'}\n- Ospiti: ${guests}${needParking ? '\n- Richiedo posto auto gratuito (fino a 2 posti)' : ''}\nPotete confermarmi la disponibilità per queste date? Grazie!`;
     window.open(`https://wa.me/${t.brand.phoneRaw}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -26,10 +26,10 @@ export const QuickBookingBar: React.FC = () => {
           <div className="flex items-center gap-3 text-[11px] text-[#6d6459]">
             <span className="flex items-center gap-1 font-medium text-emerald-700">
               <Car className="w-3.5 h-3.5" />
-              <span>3 Posti Auto Gratuiti</span>
+              <span>2 Posti Auto Gratuiti</span>
             </span>
             <span>•</span>
-            <span>Culla / Letto Extra su Richiesta</span>
+            <span>Culla Bebè su Richiesta</span>
           </div>
         </div>
 
@@ -75,7 +75,6 @@ export const QuickBookingBar: React.FC = () => {
               <option value="3 Ospiti">3 Ospiti</option>
               <option value="4 Ospiti">4 Ospiti</option>
               <option value="4 Ospiti + Culla">4 Ospiti + Culla</option>
-              <option value="4 Ospiti + Letto extra">4 Ospiti + Letto extra</option>
             </select>
           </div>
 

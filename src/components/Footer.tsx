@@ -132,7 +132,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-[11px] font-medium transition-colors"
               >
-                <span>Booking.com (9.6)</span>
+                <span>Booking.com (9.7)</span>
                 <ExternalLink className="w-3 h-3 text-[#d8c29d]" />
               </a>
 

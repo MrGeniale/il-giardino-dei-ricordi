@@ -108,7 +108,7 @@ export const SpacesSection: React.FC<SpacesSectionProps> = ({ onOpenBooking }) =
 
               <div className="pt-6 border-t border-[#f0eae0] flex items-center justify-between">
                 <div className="text-xs text-[#7d7468]">
-                  Ingresso indipendente • Climatizzato
+                  Ingresso indipendente • Riscaldamento a pavimento
                 </div>
                 <button
                   type="button"

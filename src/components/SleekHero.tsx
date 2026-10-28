@@ -30,7 +30,7 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
     },
     {
       image: '/images/ndf_8246.jpg',
-      title: isEn ? 'Up to 3 Free Parking Spaces' : 'Fino a 3 Posti Auto Gratuiti Riservati',
+      title: isEn ? 'Up to 2 Free Parking Spaces' : 'Fino a 2 Posti Auto Gratuiti Riservati',
       subtitle: isEn ? 'Gated private driveway inside the property' : 'Viale carrabile privato custodito',
     },
     {
@@ -52,8 +52,8 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
     const cotStr = needCot ? (isEn ? ' • Baby cot requested' : ' • Culla bebè richiesta') : '';
     const extraBedStr = needExtraBed ? (isEn ? ' • Extra single bed requested' : ' • Letto singolo extra richiesto') : '';
     const msg = isEn
-      ? `Hello Marilena, I would like to check availability for Il Giardino dei Ricordi in Alberobello:\n- Dates: from ${checkIn || 'to be agreed'} to ${checkOut || 'to be agreed'}\n- Guests: ${guests}${cotStr}${extraBedStr}\n- Parking requested: Yes (up to 3 free spaces in private driveway)\nCould you please confirm availability for these dates? Thank you!`
-      : `Buongiorno Marilena, vorrei verificare la disponibilità a Il Giardino dei Ricordi ad Alberobello:\n- Date: dal ${checkIn || 'da concordare'} al ${checkOut || 'da concordare'}\n- Ospiti: ${guests}${cotStr}${extraBedStr}\n- Richiesta posto auto: Sì (fino a 3 posti gratuiti nel viale)\nPotete confermarmi la disponibilità per queste date? Grazie!`;
+      ? `Hello Marilena, I would like to check availability for Il Giardino dei Ricordi in Alberobello:\n- Dates: from ${checkIn || 'to be agreed'} to ${checkOut || 'to be agreed'}\n- Guests: ${guests}${cotStr}${extraBedStr}\n- Parking requested: Yes (up to 2 free spaces in private driveway)\nCould you please confirm availability for these dates? Thank you!`
+      : `Buongiorno Marilena, vorrei verificare la disponibilità a Il Giardino dei Ricordi ad Alberobello:\n- Date: dal ${checkIn || 'da concordare'} al ${checkOut || 'da concordare'}\n- Ospiti: ${guests}${cotStr}${extraBedStr}\n- Richiesta posto auto: Sì (fino a 2 posti gratuiti nel viale)\nPotete confermarmi la disponibilità per queste date? Grazie!`;
     window.open(`https://wa.me/${t.brand.phoneRaw}?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
@@ -70,7 +70,7 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
             </span>
 
             <div className="flex items-center gap-1.5 text-xs text-[#1e3329] font-medium">
-              <span className="text-amber-500 font-bold">★ 9.6</span>
+              <span className="text-amber-500 font-bold">★ 9.7</span>
               <span className="text-[#7d7367]">{isEn ? 'Exceptional on Booking.com' : 'Eccezionale su Booking.com (91+ recensioni)'}</span>
             </div>
           </div>
@@ -155,7 +155,7 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
             </div>
             <div className="min-w-0">
               <span className="text-[11px] sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block truncate">
-                {isEn ? '3 Cars Free' : '3 Posti Auto'}
+                {isEn ? '2 Cars Free' : '2 Posti Auto'}
               </span>
               <span className="text-[10px] sm:text-xs text-[#71685e] block leading-tight">
                 {isEn ? 'Free private parking' : 'Gratuito nel viale privato'}
@@ -183,7 +183,7 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
             </div>
             <div className="min-w-0">
               <span className="text-[11px] sm:text-sm font-bold text-[#1f3329] uppercase tracking-wider block truncate">
-                {isEn ? '4+1 Guests' : '4+1 Posti Letto'}
+                {isEn ? '4 Guests' : '4 Posti Letto'}
               </span>
               <span className="text-[10px] sm:text-xs text-[#71685e] block leading-tight">
                 {isEn ? '2 Bed & 2 Bath' : '2 Camere e 2 Bagni'}

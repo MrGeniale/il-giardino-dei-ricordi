@@ -20,7 +20,7 @@ const slides = [
   {
     image: '/images/ndf_8246.jpg',
     tag: 'Rarità ad Alberobello',
-    title: 'Parcheggio Privato per 3 Auto',
+    title: 'Parcheggio Privato per 2 Auto',
   },
   {
     image: '/images/ndf_8001.jpg',
@@ -80,7 +80,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             {/* Top Rating Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/50 backdrop-blur-md border border-[#c8a97e]/50 text-[#f7e0bc] text-[11px] sm:text-xs uppercase tracking-[0.2em] mb-4">
               <Sparkles className="w-3.5 h-3.5 text-[#e6cfab]" />
-              <span>★ 9.6 Eccezionale su Booking.com • Alberobello</span>
+              <span>★ 9.7 Eccezionale su Booking.com • Alberobello</span>
             </div>
 
             {/* Name & Title */}
@@ -90,16 +90,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-[#ded6c9] max-w-2xl font-sans leading-relaxed mb-6 font-light drop-shadow-md">
-              Il raro privilegio di un ampio giardino privato e <span className="text-[#f7e0bc] font-medium">fino a 3 posti auto gratuiti</span> all'interno della dimora, a soli 700 metri a piedi dai celebri Trulli.
+              Il raro privilegio di un ampio giardino privato e <span className="text-[#f7e0bc] font-medium">fino a 2 posti auto gratuiti</span> all'interno della dimora, a soli 700 metri a piedi dai celebri Trulli.
             </p>
 
             {/* 4 Feature Badges Bar */}
             <div className="flex flex-wrap gap-2 sm:gap-2.5 mb-8">
               {[
-                { label: '3 Posti Auto Gratuiti', icon: <Car className="w-3.5 h-3.5 text-emerald-400" /> },
+                { label: '2 Posti Auto Gratuiti', icon: <Car className="w-3.5 h-3.5 text-emerald-400" /> },
                 { label: '700m dai Trulli a Piedi', icon: <MapPin className="w-3.5 h-3.5 text-[#e6cfab]" /> },
                 { label: 'Ampio Giardino con Fico', icon: <Trees className="w-3.5 h-3.5 text-emerald-400" /> },
-                { label: '4 Posti Letto (+ Culla / Extra)', icon: <Users className="w-3.5 h-3.5 text-[#e6cfab]" /> },
+                { label: '4 Posti Letto (+ Culla su richiesta)', icon: <Users className="w-3.5 h-3.5 text-[#e6cfab]" /> },
               ].map((pill, i) => (
                 <div
                   key={i}

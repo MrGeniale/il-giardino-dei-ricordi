@@ -33,11 +33,11 @@ export const FilmProposal: React.FC<FilmProposalProps> = ({ onOpenBooking }) => 
     {
       act: 'Capitolo III',
       time: 'Ore 16:30',
-      title: 'Il Rientro nel Viale Privato: 3 Posti Auto Riservati',
+      title: 'Il Rientro nel Viale Privato: 2 Posti Auto Riservati',
       subtitle: 'La rarità più preziosa della Capitale dei Trulli',
-      desc: 'Mentre migliaia di visitatori cercano disperatamente un parcheggio a pagamento da 25-30€ al giorno lungo la circonvallazione, tu entri comodamente con la tua auto nel viale carrabile recintato de Il Giardino dei Ricordi. Posto garantito per fino a 3 autovetture in totale sicurezza.',
+      desc: 'Mentre migliaia di visitatori cercano disperatamente un parcheggio a pagamento da 25-30€ al giorno lungo la circonvallazione, tu entri comodamente con la tua auto nel viale carrabile recintato de Il Giardino dei Ricordi. Posto garantito per fino a 2 autovetture in totale sicurezza.',
       image: '/images/ndf_8246.jpg',
-      badge: 'Fino a 3 Posti Auto Gratuiti',
+      badge: 'Fino a 2 Posti Auto Gratuiti',
       highlight: 'Viale recintato esclusivo • 0€ di costo sosta • Spazio per tutta la famiglia',
     },
     {
@@ -54,11 +54,11 @@ export const FilmProposal: React.FC<FilmProposalProps> = ({ onOpenBooking }) => 
       act: 'Capitolo V',
       time: 'Ore 22:30',
       title: 'Il Riposo Profondo: 2 Camere e 2 Bagni Indipendenti',
-      subtitle: 'Spazio e privacy per coppie, famiglie e amici (4+1 Ospiti)',
-      desc: 'Una notte rigenerante nelle due ampie camere matrimoniali indipendenti: la padronale con specchiera d’epoca e la seconda contemporanea in rovere chiaro. Grazie ai 2 bagni completi con doccia e alla disponibilità di culla e letto extra, ognuno ha la sua massima privacy.',
+      subtitle: 'Spazio e privacy per coppie e famiglie (4 Posti Letto)',
+      desc: 'Una notte rigenerante nelle due ampie camere matrimoniali indipendenti: la padronale con specchiera d’epoca e la seconda contemporanea in rovere chiaro, con riscaldamento a pavimento in tutta la dimora e climatizzatore in cucina. Grazie ai 2 bagni completi con doccia e alla disponibilità di culla bebè, ognuno ha la sua massima privacy.',
       image: '/images/ndf_8001.jpg',
       badge: 'Comfort & Spazio Familiare',
-      highlight: '4 Posti letto + Culla • 2 Bagni con doccia • Climatizzazione autonoma',
+      highlight: '4 Posti letto + Culla • 2 Bagni con doccia • Riscaldamento a pavimento',
     },
   ];
 
@@ -153,7 +153,7 @@ export const FilmProposal: React.FC<FilmProposalProps> = ({ onOpenBooking }) => 
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-[#ded8cb]">
             <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-              <span className="font-heading text-lg text-white font-medium block mb-1">3 Posti Auto</span>
+              <span className="font-heading text-lg text-white font-medium block mb-1">2 Posti Auto</span>
               <p className="text-xs text-[#b8b0a2]">Viale privato custodito e cancello d'accesso</p>
             </div>
             <div className="p-4 rounded-xl bg-white/5 border border-white/10">
@@ -165,12 +165,12 @@ export const FilmProposal: React.FC<FilmProposalProps> = ({ onOpenBooking }) => 
               <p className="text-xs text-[#b8b0a2]">Due cabine doccia cristallo, bidet e phon</p>
             </div>
             <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-              <span className="font-heading text-lg text-white font-medium block mb-1">4+1 Posti Letto</span>
-              <p className="text-xs text-[#b8b0a2]">2 camere matrimoniali + culla o letto extra</p>
+              <span className="font-heading text-lg text-white font-medium block mb-1">4 Posti Letto</span>
+              <p className="text-xs text-[#b8b0a2]">2 camere matrimoniali + culla bebè</p>
             </div>
             <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-              <span className="font-heading text-lg text-white font-medium block mb-1">Aria Condizionata</span>
-              <p className="text-xs text-[#b8b0a2]">Climatizzatori indipendenti in ogni ambiente</p>
+              <span className="font-heading text-lg text-white font-medium block mb-1">Comfort Termico</span>
+              <p className="text-xs text-[#b8b0a2]">Riscaldamento a pavimento & clima in cucina</p>
             </div>
             <div className="p-4 rounded-xl bg-white/5 border border-white/10">
               <span className="font-heading text-lg text-white font-medium block mb-1">Wi-Fi Fibra Ultra</span>

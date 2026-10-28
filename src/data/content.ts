@@ -195,7 +195,7 @@ export const content: Record<'it' | 'en', ContentData> = {
       address: "Via Capitano V. di Mola 35, 70011 Alberobello (BA), Italia",
       bookingUrl: "https://www.booking.com/hotel/it/il-giardino-dei-ricordi.it.html",
       facebookUrl: "https://www.facebook.com/profile.php?id=100094762976863",
-      rating: "9.6",
+      rating: "9.7",
       reviewCount: "91+",
     },
     nav: {
@@ -211,10 +211,10 @@ export const content: Record<'it' | 'en', ContentData> = {
       contact: "Contattaci",
     },
     hero: {
-      badge: "★ 9.6 ECCEZIONALE SU BOOKING.COM • ALBEROBELLO CENTRO",
+      badge: "★ 9.7 ECCEZIONALE SU BOOKING.COM • ALBEROBELLO CENTRO",
       title: "L'Oasi Segreta nel Cuore di",
       titleAccent: "Alberobello",
-      subtitle: "Il raro privilegio di un ampio giardino privato e fino a 3 posti auto gratuiti all'interno della proprietà, a soli 700 metri dai celebri Trulli.",
+      subtitle: "Il raro privilegio di un ampio giardino privato e fino a 2 posti auto gratuiti all'interno della proprietà, a soli 700 metri dai celebri Trulli.",
       features: [
         {
           label: "Posizione Centrale",
@@ -222,13 +222,13 @@ export const content: Record<'it' | 'en', ContentData> = {
           icon: "MapPin",
         },
         {
-          label: "Fino a 3 Auto",
+          label: "Fino a 2 Auto",
           sub: "Parcheggio privato gratuito",
           icon: "Car",
         },
         {
           label: "4 Posti Letto",
-          sub: "+ Culla / Letto extra",
+          sub: "+ Culla bebè su richiesta",
           icon: "Bed",
         },
         {
@@ -243,7 +243,7 @@ export const content: Record<'it' | 'en', ContentData> = {
     },
     quickBar: {
       title: "Punti di forza esclusivi per il tuo soggiorno:",
-      parkingBadge: "3 Posti Auto Gratuiti Riservati",
+      parkingBadge: "2 Posti Auto Gratuiti Riservati",
       bedsBadge: "4 Posti Letto + Culla su Richiesta",
       centerBadge: "700m a Piedi dai Trulli",
       cta: "Verifica Date su WhatsApp",
@@ -253,13 +253,13 @@ export const content: Record<'it' | 'en', ContentData> = {
       title: "Una quiete rara nel centro della Capitale dei Trulli",
       lead: "Un rifugio accogliente pensato per chi desidera esplorare Alberobello senza rinunciare a spazio, privacy e serenità.",
       p1: "Situato in Via Capitano V. di Mola, Il Giardino dei Ricordi nasce dal desiderio di offrire un'esperienza autentica di accoglienza pugliese. La dimora combina la comodità di raggiungere a piedi Rione Monti e i trulli monumentali con la tranquillità impagabile di un cortile e giardino privato interamente recintato.",
-      p2: "Ad Alberobello trovare parcheggio è notoriamente una delle sfide più complesse: qui hai a disposizione un viale privato capace di ospitare comodamente fino a 3 auto, cancello d'accesso e ampi spazi esterni all'ombra di un fico secolare dove rinfrescarsi d'estate o sorseggiare un calice di vino la sera.",
+      p2: "Ad Alberobello trovare parcheggio è notoriamente una delle sfide più complesse: qui hai a disposizione un viale privato capace di ospitare comodamente fino a 2 auto, cancello d'accesso e ampi spazi esterni all'ombra di un fico secolare dove rinfrescarsi d'estate o sorseggiare un calice di vino la sera.",
       quote: "Accogliere i nostri ospiti non è solo aprire una porta: è farli sentire parte di una memoria felice tra i colori e i profumi della nostra terra.",
       stats: [
-        { value: "9.6", label: "Punteggio su Booking.com" },
+        { value: "9.7", label: "Punteggio su Booking.com" },
         { value: "700m", label: "Dalla Chiesa a Trullo" },
-        { value: "3", label: "Posti Auto Gratuiti" },
-        { value: "4+1", label: "Posti Letto Ospitabili" },
+        { value: "2", label: "Posti Auto Gratuiti" },
+        { value: "4", label: "Posti Letto Ospitabili" },
       ],
     },
     privileges: {
@@ -269,8 +269,8 @@ export const content: Record<'it' | 'en', ContentData> = {
       items: [
         {
           id: "parking",
-          title: "Parcheggio Privato fino a 3 Auto",
-          desc: "Nel centro di Alberobello il parcheggio è scarso e costoso. Da noi entri direttamente nel viale privato recintato e parcheggi fino a 3 vetture in totale sicurezza e gratis.",
+          title: "Parcheggio Privato fino a 2 Auto",
+          desc: "Nel centro di Alberobello il parcheggio è scarso e costoso. Da noi entri direttamente nel viale privato recintato e parcheggi fino a 2 vetture in totale sicurezza e gratis.",
           tag: "Rarità Assoluta",
           icon: "Car",
         },
@@ -290,8 +290,8 @@ export const content: Record<'it' | 'en', ContentData> = {
         },
         {
           id: "capacity",
-          title: "Spazio per Famiglie (4+1 Ospiti)",
-          desc: "Due camere matrimoniali separate, due bagni completi con doccia e la possibilità di aggiungere una culla per neonati o un lettino extra. Ideale per famiglie e coppie di amici.",
+          title: "Spazio per Famiglie (4 Posti Letto)",
+          desc: "Due camere matrimoniali separate, due bagni completi con doccia e la possibilità di aggiungere una culla per neonati. Ideale per famiglie e coppie di amici.",
           tag: "Comfort Totale",
           icon: "Users",
         },
@@ -322,23 +322,23 @@ export const content: Record<'it' | 'en', ContentData> = {
     spaces: {
       badge: "GLI INTERNI",
       title: "Spazi luminosi, ampi e curati in ogni dettaglio",
-      subtitle: "Un intero appartamento con ingresso indipendente, climatizzazione e finiture contemporanee.",
+      subtitle: "Un intero appartamento con ingresso indipendente, climatizzazione in cucina, riscaldamento a pavimento e finiture contemporanee.",
       items: [
         {
           id: "camera-padronale",
           title: "Camera Matrimoniale Padronale",
           subtitle: "Eleganza senza tempo",
-          desc: "Ampia camera con letto matrimoniale, comò d'epoca con specchiera intagliata, armadio, biancheria di pregio e climatizzatore autonomo.",
+          desc: "Ampia camera con letto matrimoniale, comò d'epoca con specchiera intagliata, armadio, biancheria di pregio e riscaldamento a pavimento.",
           image: "/images/ndf_8001.jpg",
-          features: ["Letto matrimoniale king", "Comò e specchio d'epoca", "Aria condizionata", "Finestra panoramica", "Possibilità culla bebè"],
+          features: ["Letto matrimoniale king", "Comò e specchio d'epoca", "Riscaldamento a pavimento", "Finestra panoramica", "Possibilità culla bebè"],
         },
         {
           id: "camera-moderna",
           title: "Seconda Camera Matrimoniale",
           subtitle: "Comfort e design moderno",
-          desc: "Spaziosa e accogliente, rifinita con arredi in rovere chiaro, grande armadio a tre ante, sedute coordinate e pavimento in pietra levigata.",
+          desc: "Spaziosa e accogliente, rifinita con arredi in rovere chiaro, grande armadio a tre ante, sedute coordinate, pavimento in pietra e riscaldamento a pavimento.",
           image: "/images/ndf_8022.jpg",
-          features: ["Letto matrimoniale", "Armadio capiente", "Aria condizionata", "Tavolino toilette", "Letto extra su richiesta"],
+          features: ["Letto matrimoniale", "Armadio capiente", "Riscaldamento a pavimento", "Tavolino toilette", "Ampia finestra"],
         },
         {
           id: "bagni-privati",
@@ -352,9 +352,9 @@ export const content: Record<'it' | 'en', ContentData> = {
           id: "living-cucina",
           title: "Open Space Living & Cucina Attrezzata",
           subtitle: "La convivialità di casa",
-          desc: "Cucina completa con forno, piano cottura a gas, microonde, frigo e macchina del caffè. Tavolo da pranzo allungabile per 6 persone e salotto relax con Smart TV.",
+          desc: "Cucina completa con climatizzatore, forno, piano cottura a gas, microonde, frigo e macchina del caffè. Tavolo da pranzo allungabile per 6 persone e salotto relax con Smart TV.",
           image: "/images/ndf_7963.jpg",
-          features: ["Cucina completa di elettrodomestici", "Tavolo da pranzo per 6", "Due comodi divani", "Smart TV a schermo piatto", "Macchina caffè e bollitore"],
+          features: ["Cucina completa di elettrodomestici", "Climatizzatore autonomo", "Tavolo da pranzo per 6", "Due comodi divani", "Smart TV a schermo piatto", "Macchina caffè e bollitore"],
         },
       ],
     },
@@ -364,7 +364,7 @@ export const content: Record<'it' | 'en', ContentData> = {
       subtitle: "Tutto ciò di cui hai bisogno per sentirti a casa, con le comodità di una struttura di alto livello.",
       list: [
         {
-          title: "Parcheggio per 3 Auto",
+          title: "Parcheggio per 2 Auto",
           desc: "Viale carrabile recintato con cancello privato, totalmente gratuito.",
           icon: "Car",
         },
@@ -374,8 +374,8 @@ export const content: Record<'it' | 'en', ContentData> = {
           icon: "Trees",
         },
         {
-          title: "Aria Condizionata & Riscaldamento",
-          desc: "Climatizzatori indipendenti per un comfort ideale in ogni stagione.",
+          title: "Climatizzatore in Cucina & Riscaldamento a Pavimento",
+          desc: "Climatizzatore nella zona giorno/cucina e riscaldamento a pavimento in tutta la casa per un comfort ideale in ogni stagione.",
           icon: "Wind",
         },
         {
@@ -389,8 +389,8 @@ export const content: Record<'it' | 'en', ContentData> = {
           icon: "UtensilsCrossed",
         },
         {
-          title: "Culla e Letto Aggiuntivo",
-          desc: "Disponibilità su richiesta di culla bebè o terzo lettino.",
+          title: "Culla Bebè",
+          desc: "Disponibilità su richiesta di culla bebè per neonati e bimbi 0-3 anni.",
           icon: "Baby",
         },
         {
@@ -465,7 +465,7 @@ export const content: Record<'it' | 'en', ContentData> = {
       badge: "OSPITI ENTUSIASTI",
       title: "Cosa dicono di noi i nostri viaggiatori",
       subtitle: "Oltre 90 recensioni verificate con una valutazione media straordinaria.",
-      ratingScore: "9.6",
+      ratingScore: "9.7",
       ratingLabel: "Eccezionale",
       source: "Verificato su Booking.com",
       items: [
@@ -499,14 +499,14 @@ export const content: Record<'it' | 'en', ContentData> = {
       badge: "PRENOTAZIONE DIRETTA",
       title: "Prenota direttamente con Marilena",
       subtitle: "Ricevi subito la migliore tariffa garantita senza commissioni di intermediari.",
-      desc: "Contattandoci direttamente potrai concordare orari flessibili di check-in, richiedere culla o letto extra e ricevere consigli preziosi per vivere Alberobello come un vero locale.",
+      desc: "Contattandoci direttamente potrai concordare orari flessibili di check-in, richiedere la culla bebè e ricevere consigli preziosi per vivere Alberobello come un vero locale.",
       perks: [
         {
           title: "Miglior Tariffa Garantita",
           desc: "Nessun costo di agenzia o rincari di portale: prezzo trasparente.",
         },
         {
-          title: "3 Posti Auto Inclusi & Riservati",
+          title: "2 Posti Auto Inclusi & Riservati",
           desc: "Il tuo posto nel viale recintato è garantito all'arrivo.",
         },
         {
@@ -514,8 +514,8 @@ export const content: Record<'it' | 'en', ContentData> = {
           desc: "Parli direttamente con la signora Marilena su WhatsApp o per telefono.",
         },
         {
-          title: "Flessibilità Culla / Letto Aggiuntivo",
-          desc: "Personalizziamo la sistemazione in base alle esigenze della tua famiglia.",
+          title: "Flessibilità Culla Bebè",
+          desc: "Personalizziamo la sistemazione con culla per i più piccoli.",
         },
       ],
       ctaWhatsApp: "Scrivici su WhatsApp",
@@ -532,7 +532,7 @@ export const content: Record<'it' | 'en', ContentData> = {
       guestsCount: (n: number) => `${n} ${n === 1 ? 'Ospite' : 'Ospiti'}`,
       cotsOption: "Culla per neonato / bebè (0-3 anni)",
       extraBedOption: "Letto singolo aggiuntivo",
-      parkingOption: "Arriverò in auto (fino a 3 posti gratuiti nel viale privato)",
+      parkingOption: "Arriverò in auto (fino a 2 posti gratuiti nel viale privato)",
       nameLabel: "Il tuo nome e cognome",
       phoneLabel: "Il tuo recapito telefonico",
       notesLabel: "Messaggio o richieste particolari",
@@ -540,7 +540,7 @@ export const content: Record<'it' | 'en', ContentData> = {
       close: "Chiudi",
     },
     footer: {
-      about: "Dimora turistica di charme ad Alberobello con giardino privato, 3 posti auto gratuiti e comfort contemporaneo per famiglie e coppie.",
+      about: "Dimora turistica di charme ad Alberobello con giardino privato, 2 posti auto gratuiti e comfort contemporaneo per famiglie e coppie.",
       quickLinks: "Link Rapidi",
       contacts: "Contatti Diretti",
       rights: "Tutti i diritti riservati. Locazione Turistica Alberobello.",
@@ -558,7 +558,7 @@ export const content: Record<'it' | 'en', ContentData> = {
       address: "Via Capitano V. di Mola 35, 70011 Alberobello (BA), Italy",
       bookingUrl: "https://www.booking.com/hotel/it/il-giardino-dei-ricordi.it.html",
       facebookUrl: "https://www.facebook.com/profile.php?id=100094762976863",
-      rating: "9.6",
+      rating: "9.7",
       reviewCount: "91+",
     },
     nav: {
@@ -574,10 +574,10 @@ export const content: Record<'it' | 'en', ContentData> = {
       contact: "Contact",
     },
     hero: {
-      badge: "★ 9.6 EXCEPTIONAL ON BOOKING.COM • ALBEROBELLO CENTER",
+      badge: "★ 9.7 EXCEPTIONAL ON BOOKING.COM • ALBEROBELLO CENTER",
       title: "The Secret Garden in the Heart of",
       titleAccent: "Alberobello",
-      subtitle: "The rare luxury of an expansive private garden and up to 3 complimentary private parking spaces on-site, just 700 meters from the world-famous Trulli.",
+      subtitle: "The rare luxury of an expansive private garden and up to 2 complimentary private parking spaces on-site, just 700 meters from the world-famous Trulli.",
       features: [
         {
           label: "Central Location",
@@ -585,13 +585,13 @@ export const content: Record<'it' | 'en', ContentData> = {
           icon: "MapPin",
         },
         {
-          label: "Up to 3 Cars",
+          label: "Up to 2 Cars",
           sub: "Free private parking",
           icon: "Car",
         },
         {
           label: "Sleeps 4",
-          sub: "+ Cot / Extra bed on request",
+          sub: "+ Baby cot on request",
           icon: "Bed",
         },
         {
@@ -606,7 +606,7 @@ export const content: Record<'it' | 'en', ContentData> = {
     },
     quickBar: {
       title: "Exclusive highlights for your stay:",
-      parkingBadge: "3 Free Private Parking Spots",
+      parkingBadge: "2 Free Private Parking Spots",
       bedsBadge: "Sleeps 4 + Baby Cot on Request",
       centerBadge: "700m Walk to Historic Trulli",
       cta: "Check Dates on WhatsApp",
@@ -616,13 +616,13 @@ export const content: Record<'it' | 'en', ContentData> = {
       title: "Rare serenity in the Capital of Trulli",
       lead: "A welcoming sanctuary designed for travelers who want to explore Alberobello without sacrificing space, privacy, and calm.",
       p1: "Located on Via Capitano V. di Mola, Il Giardino dei Ricordi was born from the desire to offer an authentic, warm Apulian hospitality experience. The property combines walking convenience to Rione Monti with the priceless peace of a fully fenced private courtyard and garden.",
-      p2: "Parking in Alberobello is notoriously challenging: here you have a private gated driveway accommodating up to 3 cars with complete peace of mind, alongside generous outdoor grounds shaded by a majestic fig tree where you can unwind after a day of sightseeing.",
+      p2: "Parking in Alberobello is notoriously challenging: here you have a private gated driveway accommodating up to 2 cars with complete peace of mind, alongside generous outdoor grounds shaded by a majestic fig tree where you can unwind after a day of sightseeing.",
       quote: "Welcoming guests is not just handing over keys: it's creating lasting happy memories amidst the colors and fragrances of Puglia.",
       stats: [
-        { value: "9.6", label: "Booking.com Score" },
+        { value: "9.7", label: "Booking.com Score" },
         { value: "700m", label: "To Trullo Church" },
-        { value: "3", label: "Free Parking Spaces" },
-        { value: "4+1", label: "Guests Capacity" },
+        { value: "2", label: "Free Parking Spaces" },
+        { value: "4", label: "Guests Capacity" },
       ],
     },
     privileges: {
@@ -632,8 +632,8 @@ export const content: Record<'it' | 'en', ContentData> = {
       items: [
         {
           id: "parking",
-          title: "Private Parking for up to 3 Cars",
-          desc: "In central Alberobello, parking is scarce and expensive. Here you drive straight into a gated private driveway and park up to 3 cars safely and for free.",
+          title: "Private Parking for up to 2 Cars",
+          desc: "In central Alberobello, parking is scarce and expensive. Here you drive straight into a gated private driveway and park up to 2 cars safely and for free.",
           tag: "Rare Luxury",
           icon: "Car",
         },
@@ -653,8 +653,8 @@ export const content: Record<'it' | 'en', ContentData> = {
         },
         {
           id: "capacity",
-          title: "Family Space (4+1 Guests)",
-          desc: "Two independent double bedrooms, two full bathrooms with showers, plus the option of an extra bed or baby cot. Perfect for families and couples traveling together.",
+          title: "Family Space (4 Guests)",
+          desc: "Two independent double bedrooms, two full bathrooms with showers, plus the option of a baby cot. Perfect for families and couples traveling together.",
           tag: "Full Comfort",
           icon: "Users",
         },
@@ -685,23 +685,23 @@ export const content: Record<'it' | 'en', ContentData> = {
     spaces: {
       badge: "THE INTERIORS",
       title: "Bright, spacious rooms crafted for your comfort",
-      subtitle: "A complete residence with private entrance, individual climate control, and modern amenities.",
+      subtitle: "A complete residence with private entrance, kitchen climate control, underfloor heating throughout, and modern amenities.",
       items: [
         {
           id: "camera-padronale",
           title: "Master Double Bedroom",
           subtitle: "Timeless charm",
-          desc: "Generous bedroom featuring a king-size double bed, vintage vanity with carved mirror, spacious wardrobe, fine linens, and individual air conditioning.",
+          desc: "Generous bedroom featuring a king-size double bed, vintage vanity with carved mirror, spacious wardrobe, fine linens, and underfloor heating throughout.",
           image: "/images/ndf_8001.jpg",
-          features: ["King double bed", "Antique mirror dresser", "Air conditioning", "Scenic window", "Baby cot available"],
+          features: ["King double bed", "Antique mirror dresser", "Underfloor heating", "Scenic window", "Baby cot available"],
         },
         {
           id: "camera-moderna",
           title: "Second Double Bedroom",
           subtitle: "Contemporary serenity",
-          desc: "Light-filled and quiet, appointed with light oak furniture, a large three-door wardrobe, matching chairs, and polished limestone flooring.",
+          desc: "Light-filled and quiet, appointed with light oak furniture, a large three-door wardrobe, matching chairs, and polished limestone flooring with underfloor heating.",
           image: "/images/ndf_8022.jpg",
-          features: ["Double bed", "Spacious wardrobe", "Air conditioning", "Vanity desk", "Extra bed on request"],
+          features: ["Double bed", "Spacious wardrobe", "Underfloor heating", "Vanity desk", "Large window"],
         },
         {
           id: "bagni-privati",
@@ -715,9 +715,9 @@ export const content: Record<'it' | 'en', ContentData> = {
           id: "living-cucina",
           title: "Open Space Living & Fully Equipped Kitchen",
           subtitle: "The warmth of home",
-          desc: "Full kitchen with oven, gas stove, microwave, large fridge, and espresso coffee machine. Extendable dining table for 6 and relaxing lounge with Smart TV.",
+          desc: "Full kitchen with air conditioning, oven, gas stove, microwave, large fridge, and espresso coffee machine. Extendable dining table for 6 and relaxing lounge with Smart TV.",
           image: "/images/ndf_7963.jpg",
-          features: ["Full modern appliances", "Dining table for 6", "Two cozy sofas", "Flat-screen Smart TV", "Coffee maker & kettle"],
+          features: ["Full modern appliances", "Air conditioning unit", "Dining table for 6", "Two cozy sofas", "Flat-screen Smart TV", "Coffee maker & kettle"],
         },
       ],
     },
@@ -727,7 +727,7 @@ export const content: Record<'it' | 'en', ContentData> = {
       subtitle: "Everything you need to feel right at home with the perks of a top-rated stay.",
       list: [
         {
-          title: "Parking for 3 Cars",
+          title: "Parking for 2 Cars",
           desc: "Private gated driveway inside the property, 100% free.",
           icon: "Car",
         },
@@ -737,8 +737,8 @@ export const content: Record<'it' | 'en', ContentData> = {
           icon: "Trees",
         },
         {
-          title: "A/C & Heating",
-          desc: "Autonomous air conditioning units for year-round climate comfort.",
+          title: "Kitchen A/C & Underfloor Heating",
+          desc: "Air conditioning in kitchen/living space and whole-home underfloor heating for year-round comfort.",
           icon: "Wind",
         },
         {
@@ -752,8 +752,8 @@ export const content: Record<'it' | 'en', ContentData> = {
           icon: "UtensilsCrossed",
         },
         {
-          title: "Baby Cot & Extra Bed",
-          desc: "Available upon request for family flexibility.",
+          title: "Baby Cot",
+          desc: "Available upon request for infants (0-3 years).",
           icon: "Baby",
         },
         {
@@ -828,7 +828,7 @@ export const content: Record<'it' | 'en', ContentData> = {
       badge: "GUEST REVIEWS",
       title: "What our travelers say about us",
       subtitle: "Over 90 verified reviews with an extraordinary average rating.",
-      ratingScore: "9.6",
+      ratingScore: "9.7",
       ratingLabel: "Exceptional",
       source: "Verified on Booking.com",
       items: [
@@ -869,7 +869,7 @@ export const content: Record<'it' | 'en', ContentData> = {
           desc: "No platform fees or commissions: direct, honest rates.",
         },
         {
-          title: "3 Parking Spots Guaranteed",
+          title: "2 Parking Spots Guaranteed",
           desc: "Your spot in the private gated driveway is reserved for arrival.",
         },
         {
@@ -878,7 +878,7 @@ export const content: Record<'it' | 'en', ContentData> = {
         },
         {
           title: "Family Flexibility",
-          desc: "Customized setup with baby cot or extra bed as requested.",
+          desc: "Customized setup with baby cot upon request.",
         },
       ],
       ctaWhatsApp: "Message on WhatsApp",
@@ -895,7 +895,7 @@ export const content: Record<'it' | 'en', ContentData> = {
       guestsCount: (n: number) => `${n} ${n === 1 ? 'Guest' : 'Guests'}`,
       cotsOption: "Baby cot / crib (0-3 years)",
       extraBedOption: "Extra single bed",
-      parkingOption: "Arriving by car (up to 3 free parking spots on site)",
+      parkingOption: "Arriving by car (up to 2 free parking spots on site)",
       nameLabel: "Your Name",
       phoneLabel: "Phone Number",
       notesLabel: "Message or special requests",
@@ -903,7 +903,7 @@ export const content: Record<'it' | 'en', ContentData> = {
       close: "Close",
     },
     footer: {
-      about: "Charming vacation residence in Alberobello featuring a private garden, 3 free parking spots, and contemporary comforts for families and couples.",
+      about: "Charming vacation residence in Alberobello featuring a private garden, 2 free parking spots, and contemporary comforts for families and couples.",
       quickLinks: "Quick Links",
       contacts: "Direct Contacts",
       rights: "All rights reserved. Tourist Rental Alberobello.",

@@ -16,9 +16,9 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
       {/* 1. Nastro Editoriale Continuo (Editorial Marquee Ticker) */}
       <div className="bg-[#172e24] text-[#f7e0bc] py-3.5 border-y border-[#29483b] overflow-hidden select-none">
         <div className="flex whitespace-nowrap animate-marquee gap-8 text-[11px] uppercase tracking-[0.28em] font-medium">
-          <span>{isEn ? '★ 9.6 on Booking.com (Exceptional)' : '★ 9.6 su Booking.com (Eccezionale)'}</span>
+          <span>{isEn ? '★ 9.7 on Booking.com (Exceptional)' : '★ 9.7 su Booking.com (Eccezionale)'}</span>
           <span className="text-[#c8a97e]">•</span>
-          <span>{isEn ? 'Up to 3 Free Reserved Parking Spots' : 'Fino a 3 Posti Auto Gratuiti Riservati'}</span>
+          <span>{isEn ? 'Up to 2 Free Reserved Parking Spots' : 'Fino a 2 Posti Auto Gratuiti Riservati'}</span>
           <span className="text-[#c8a97e]">•</span>
           <span>{isEn ? 'Just 700m Walk to Historic Trulli' : 'A soli 700m dai Trulli Storici a Piedi'}</span>
           <span className="text-[#c8a97e]">•</span>
@@ -26,11 +26,11 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
           <span className="text-[#c8a97e]">•</span>
           <span>{isEn ? 'Sleeps 4 with 2 Bedrooms & 2 Full Bathrooms' : '4 Posti Letto con 2 Camere e 2 Bagni'}</span>
           <span className="text-[#c8a97e]">•</span>
-          <span>{isEn ? 'Baby Cot & Extra Bed on Request' : 'Culla e Letto Extra su Richiesta'}</span>
+          <span>{isEn ? 'Underfloor Heating & Baby Cot on Request' : 'Riscaldamento a Pavimento & Culla Bebè'}</span>
           <span className="text-[#c8a97e]">•</span>
-          <span>{isEn ? '★ 9.6 on Booking.com (Exceptional)' : '★ 9.6 su Booking.com (Eccezionale)'}</span>
+          <span>{isEn ? '★ 9.7 on Booking.com (Exceptional)' : '★ 9.7 su Booking.com (Eccezionale)'}</span>
           <span className="text-[#c8a97e]">•</span>
-          <span>{isEn ? 'Up to 3 Free Reserved Parking Spots' : 'Fino a 3 Posti Auto Gratuiti Riservati'}</span>
+          <span>{isEn ? 'Up to 2 Free Reserved Parking Spots' : 'Fino a 2 Posti Auto Gratuiti Riservati'}</span>
           <span className="text-[#c8a97e]">•</span>
           <span>{isEn ? 'Just 700m Walk to Historic Trulli' : 'A soli 700m dai Trulli Storici a Piedi'}</span>
           <span className="text-[#c8a97e]">•</span>
@@ -95,7 +95,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                     Alberobello is a world-renowned UNESCO gem, but anyone who visits knows how challenging it can be to find accommodations that combine walking convenience to the Trulli with true tranquility and effortless parking.
                   </p>
                   <p>
-                    <strong>Il Giardino dei Ricordi</strong> was created specifically to bridge this gap: an impeccably curated holiday home featuring a private gated driveway accommodating up to 3 cars, 2 independent double bedrooms, 2 full bathrooms, and a lush private garden crowned by an ancient fig tree where time slows down.
+                    <strong>Il Giardino dei Ricordi</strong> was created specifically to bridge this gap: an impeccably curated holiday home featuring a private gated driveway accommodating up to 2 cars, 2 independent double bedrooms, 2 full bathrooms, and a lush private garden crowned by an ancient fig tree where time slows down.
                   </p>
                 </>
               ) : (
@@ -104,7 +104,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                     Alberobello è una gemma celebre in tutto il mondo, ma chi la visita sa quanto possa essere difficile trovare un alloggio che unisca la comodità di raggiungere a piedi i Trulli alla pace e alla facilità di parcheggio.
                   </p>
                   <p>
-                    <strong>Il Giardino dei Ricordi</strong> nasce esattamente per colmare questa distanza: una dimora curata nei dettagli, con viale privato per custodire fino a 3 autovetture, 2 ampie camere indipendenti, 2 bagni completi e un rigoglioso giardino dominato da un fico secolare dove il tempo torna a scorrere lento.
+                    <strong>Il Giardino dei Ricordi</strong> nasce esattamente per colmare questa distanza: una dimora curata nei dettagli, con viale privato per custodire fino a 2 autovetture, 2 ampie camere indipendenti, 2 bagni completi e un rigoglioso giardino dominato da un fico secolare dove il tempo torna a scorrere lento.
                   </p>
                 </>
               )}
@@ -122,7 +122,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
               </div>
               <div>
                 <span className="font-heading text-2xl sm:text-4xl text-[#1e3329] font-medium block">
-                  {isEn ? '3 Cars' : '3 Auto'}
+                  {isEn ? '2 Cars' : '2 Auto'}
                 </span>
                 <span className="text-[11px] sm:text-xs text-[#786f66] uppercase tracking-wider block mt-0.5 sm:mt-1">
                   {isEn ? 'Free private parking' : 'Parcheggio gratuito'}
@@ -130,7 +130,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
               </div>
               <div>
                 <span className="font-heading text-2xl sm:text-4xl text-[#1e3329] font-medium block">
-                  4+1
+                  4
                 </span>
                 <span className="text-[11px] sm:text-xs text-[#786f66] uppercase tracking-wider block mt-0.5 sm:mt-1">
                   {isEn ? 'Guests & Baby cot' : 'Ospiti & Culla bebè'}
@@ -138,7 +138,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
               </div>
               <div>
                 <span className="font-heading text-2xl sm:text-4xl text-[#1e3329] font-medium block">
-                  9.6
+                  9.7
                 </span>
                 <span className="text-[11px] sm:text-xs text-[#786f66] uppercase tracking-wider block mt-0.5 sm:mt-1">
                   {isEn ? 'Booking.com Score' : 'Voto Booking'}
@@ -191,10 +191,10 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                   {isEn ? 'Timeless charm & serene tradition' : 'Il fascino senza tempo della tradizione'}
                 </h3>
                 <p className="text-sm sm:text-base text-[#5a5247] font-light leading-relaxed mb-6 font-sans">
-                  {isEn ? 'Bright and spacious bedroom with antique dresser, carved vanity mirror, king-size bed, independent climate control, and space for baby cot.' : 'Camera spaziosa e luminosa con comò d\'epoca, specchiera intagliata, letto matrimoniale king size, climatizzatore autonomo e possibilità di aggiungere culla per neonati.'}
+                  {isEn ? 'Bright and spacious bedroom with antique dresser, carved vanity mirror, king-size bed, underfloor heating, and space for baby cot.' : 'Camera spaziosa e luminosa con comò d\'epoca, specchiera intagliata, letto matrimoniale king size, riscaldamento a pavimento e possibilità di aggiungere culla per neonati.'}
                 </p>
                 <div className="text-xs text-[#2a4f3d] font-semibold tracking-wider uppercase border-l-2 border-[#2a4f3d] pl-3 py-1">
-                  {isEn ? 'King Size • Antique Vanity • Climate Control • Bright Window' : 'King Size • Specchiera Antica • Climatizzatore • Finestra Luminosa'}
+                  {isEn ? 'King Size • Antique Vanity • Underfloor Heating • Bright Window' : 'King Size • Specchiera Antica • Riscaldamento a Pavimento • Finestra Luminosa'}
                 </div>
               </div>
             </div>
@@ -209,10 +209,10 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                   {isEn ? 'Contemporary lines & absolute quiet' : 'Linee contemporanee e quiete assoluta'}
                 </h3>
                 <p className="text-sm sm:text-base text-[#5a5247] font-light leading-relaxed mb-6 font-sans">
-                  {isEn ? 'Furnished in light oak, generous three-door wardrobe, and polished stone flooring. Relaxing quiet space with option for extra single bed on request.' : 'Rifinita con arredi in rovere chiaro, grande armadio a tre ante e pavimento in pietra levigata. Uno spazio rilassante e silenzioso con opzione per letto extra singolo su richiesta.'}
+                  {isEn ? 'Furnished in light oak, generous three-door wardrobe, and polished stone flooring with underfloor heating. A relaxing, quiet, and comfortable space.' : 'Rifinita con arredi in rovere chiaro, grande armadio a tre ante e pavimento in pietra levigata con riscaldamento a pavimento. Uno spazio rilassante, confortevole e silenzioso.'}
                 </p>
                 <div className="text-xs text-[#2a4f3d] font-semibold tracking-wider uppercase border-l-2 border-[#2a4f3d] pl-3 py-1">
-                  {isEn ? 'Double Bed • Light Oak • Large Wardrobe • Extra Bed' : 'Letto Matrimoniale • Rovere Chiaro • Armadio Capiente • Letto Extra'}
+                  {isEn ? 'Double Bed • Light Oak • Large Wardrobe • Underfloor Heating' : 'Letto Matrimoniale • Rovere Chiaro • Armadio Capiente • Riscaldamento a Pavimento'}
                 </div>
               </div>
               <div className="lg:col-span-7">
@@ -267,7 +267,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                     {isEn ? 'Open space with oven, microwave & dining table for 6' : 'Open space con forno, microonde e tavolo per 6'}
                   </h4>
                   <p className="text-xs sm:text-sm text-[#61584e] font-sans leading-relaxed">
-                    {isEn ? 'Complete kitchen for full culinary autonomy: stovetop, refrigerator, espresso machine, Smart TV, and two comfortable relaxing sofas.' : 'Cucina completa per preparare i pasti in totale autonomia: piano cottura, frigorifero, macchina del caffè espresso, Smart TV e due comodi divani relax.'}
+                    {isEn ? 'Complete kitchen for full culinary autonomy: stovetop, refrigerator, espresso machine, air conditioning unit, Smart TV, and two comfortable relaxing sofas.' : 'Cucina completa per preparare i pasti in totale autonomia: piano cottura, frigorifero, macchina del caffè espresso, climatizzatore, Smart TV e due comodi divani relax.'}
                   </p>
                 </div>
               </div>
@@ -351,13 +351,13 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
               {isEn ? 'An Invaluable Asset' : 'Un Vantaggio Inestimabile'}
             </span>
             <h2 className="font-heading text-2xl xs:text-3xl sm:text-5xl text-white font-light leading-tight mb-4 sm:mb-6">
-              {isEn ? 'Up to 3 free parking spaces inside the gated private driveway' : 'Fino a 3 posti auto gratuiti nel viale privato custodito'}
+              {isEn ? 'Up to 2 free parking spaces inside the gated private driveway' : 'Fino a 2 posti auto gratuiti nel viale privato custodito'}
             </h2>
             <p className="text-sm sm:text-lg text-[#ded8cb] font-light leading-relaxed mb-4 sm:mb-6 font-sans max-w-2xl">
               {isEn ? 'Anyone who has visited Alberobello knows the parking ordeal: costly paid parking lots (€25-30+ per day), hourly meters, and congested traffic.' : 'Chiunque abbia visitato Alberobello conosce la complessità del parcheggio: stalli a pagamento costosi (oltre 25-30€ al giorno), tariffe a ore e traffico congestionato.'}
             </p>
             <p className="text-sm sm:text-lg text-[#ded8cb] font-light leading-relaxed font-sans max-w-2xl">
-              {isEn ? 'At Il Giardino dei Ricordi, drive right in, pass through the private gate, and park up to 3 vehicles safely on site. From that moment, leave your car behind and explore all of Alberobello on foot in complete serenity.' : <>A <strong>Il Giardino dei Ricordi</strong> arrivi in auto, varchi il cancello privato e parcheggi fino a 3 veicoli all'interno della proprietà. Da quel momento la macchina non ti serve più: vivi tutta Alberobello a piedi in totale serenità.</>}
+              {isEn ? 'At Il Giardino dei Ricordi, drive right in, pass through the private gate, and park up to 2 vehicles safely on site. From that moment, leave your car behind and explore all of Alberobello on foot in complete serenity.' : <>A <strong>Il Giardino dei Ricordi</strong> arrivi in auto, varchi il cancello privato e parcheggi fino a 2 veicoli all'interno della proprietà. Da quel momento la macchina non ti serve più: vivi tutta Alberobello a piedi in totale serenità.</>}
             </p>
           </div>
 
@@ -453,7 +453,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                 {isEn ? 'Guest Reviews' : 'La Parola agli Ospiti'}
               </span>
               <h2 className="font-heading text-2xl xs:text-3xl sm:text-4xl text-[#172e24]">
-                {isEn ? 'Rating 9.6 out of 10 • Exceptional' : 'Punteggio 9.6 su 10 • Giudizio Eccezionale'}
+                {isEn ? 'Rating 9.7 out of 10 • Exceptional' : 'Punteggio 9.7 su 10 • Giudizio Eccezionale'}
               </h2>
             </div>
             <a
@@ -560,7 +560,7 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
           {isEn ? 'Contact Marilena Liuzzi Directly' : 'Contatta direttamente Marilena Liuzzi'}
         </h2>
         <p className="text-base sm:text-lg text-[#665e55] font-light max-w-xl mx-auto mb-10 font-sans">
-          {isEn ? 'No booking agency commissions: guaranteed best direct rates, 3 reserved parking spaces, and warm hospitality before and throughout your stay.' : 'Nessuna commissione d\'agenzia: miglior tariffa garantita, 3 posti auto riservati e assistenza calorosa prima e durante il tuo soggiorno ad Alberobello.'}
+          {isEn ? 'No booking agency commissions: guaranteed best direct rates, 2 reserved parking spaces, and warm hospitality before and throughout your stay.' : 'Nessuna commissione d\'agenzia: miglior tariffa garantita, 2 posti auto riservati e assistenza calorosa prima e durante il tuo soggiorno ad Alberobello.'}
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

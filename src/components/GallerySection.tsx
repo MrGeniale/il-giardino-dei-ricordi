@@ -36,7 +36,7 @@ export const GallerySection: React.FC = () => {
     { src: '/images/ndf_7994.jpg', category: 'living', title: 'Zona giorno luminosa e accogliente' },
 
     // Details, Driveway & Bathrooms
-    { src: '/images/ndf_8246.jpg', category: 'details', title: 'Viale privato con parcheggio per 3 auto' },
+    { src: '/images/ndf_8246.jpg', category: 'details', title: 'Viale privato con parcheggio per 2 auto' },
     { src: '/images/ndf_7960.jpg', category: 'details', title: 'Ingresso indipendente e facciata' },
     { src: '/images/ndf_7978.jpg', category: 'details', title: 'Bagno privato con cabina doccia' },
     { src: '/images/ndf_7979.jpg', category: 'details', title: 'Secondo bagno completo' },
