@@ -150,9 +150,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           <div>
             © {new Date().getFullYear()} {t.brand.name}. {t.footer.rights}
           </div>
-          <div className="flex items-center gap-1">
-            <span>Realizzato con cura per la Puglia</span>
-            <Heart className="w-3 h-3 text-[#9f3757] fill-[#9f3757]" />
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-[11px] font-sans">
+            <span className="text-[#d8c29d]/80">Alberobello • Valle d’Itria • Puglia</span>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <span className="text-[#a89d8f]">
+              Realizzato da{' '}
+              <a
+                href="https://www.agenziageniale.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#d8c29d] hover:text-white hover:underline transition-colors font-semibold"
+              >
+                Agenzia Geniale
+              </a>{' '}
+              di Roberto Olivieri
+            </span>
           </div>
         </div>
 

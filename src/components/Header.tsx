@@ -164,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
           <div className="flex items-center gap-3">
             <img
               src="/images/logo-nav.png"
-              alt="Logo"
+              alt="Il Giardino dei Ricordi – Alberobello"
               className="w-10 h-10 object-contain rounded-full border border-[#c8a97e]/60 shadow-2xs"
             />
             <div>

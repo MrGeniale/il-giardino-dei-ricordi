@@ -77,6 +77,11 @@ export const SleekHero: React.FC<SleekHeroProps> = ({ onOpenBooking }) => {
 
           <h1 className="font-display text-[2.2rem] xs:text-[2.6rem] sm:text-[7.5vw] lg:text-[6.8vw] font-medium text-[#26201b] leading-[1.02] sm:leading-[0.95] tracking-tight break-words sm:whitespace-nowrap">
             Il Giardino dei Ricordi
+            <span className="sr-only">
+              {isEn
+                ? ' – Charming Holiday Home with Garden & Free Parking in Alberobello'
+                : ' – Dimora con Giardino e Parcheggio Privato ad Alberobello'}
+            </span>
           </h1>
         </div>
 
