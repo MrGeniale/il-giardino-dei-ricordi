@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { MessageCircle, Phone, ArrowUpRight, ShieldCheck, MapPin, ExternalLink, Sparkles } from 'lucide-react';
+import { MessageCircle, Phone, ArrowUpRight, ShieldCheck, MapPin, ExternalLink, Sparkles, Ban, Check } from 'lucide-react';
 import { GallerySection } from '../components/GallerySection';
 
 interface EditorialProposalProps {
@@ -29,6 +29,8 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
           <span className="text-[#c8a97e]">•</span>
           <span>{isEn ? 'Underfloor Heating & Baby Cot on Request' : 'Riscaldamento a Pavimento & Culla Bebè'}</span>
           <span className="text-[#c8a97e]">•</span>
+          <span>{isEn ? 'Quiet Stay • Pets Not Allowed' : 'Massima Quiete • Animali Non Ammessi'}</span>
+          <span className="text-[#c8a97e]">•</span>
           <span>{isEn ? '★ 9.7 on Booking.com (Exceptional)' : '★ 9.7 su Booking.com (Eccezionale)'}</span>
           <span className="text-[#c8a97e]">•</span>
           <span>{isEn ? 'Up to 2 Free Reserved Parking Spots' : 'Fino a 2 Posti Auto Gratuiti Riservati'}</span>
@@ -36,6 +38,8 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
           <span>{isEn ? 'Just 700m Walk to Historic Trulli' : 'A soli 700m dai Trulli Storici a Piedi'}</span>
           <span className="text-[#c8a97e]">•</span>
           <span>{isEn ? 'Spacious Private Garden with Ancient Fig Tree' : 'Ampio Giardino Privato con Fico Secolare'}</span>
+          <span className="text-[#c8a97e]">•</span>
+          <span>{isEn ? 'Quiet Stay • Pets Not Allowed' : 'Massima Quiete • Animali Non Ammessi'}</span>
           <span className="text-[#c8a97e]">•</span>
         </div>
       </div>
@@ -270,6 +274,50 @@ export const EditorialProposal: React.FC<EditorialProposalProps> = ({ onOpenBook
                   <p className="text-xs sm:text-sm text-[#61584e] font-sans leading-relaxed">
                     {isEn ? 'Complete kitchen for full culinary autonomy: dishwasher, stovetop, oven, refrigerator, espresso machine, air conditioning unit, Smart TV, and two comfortable relaxing sofas.' : 'Cucina completa per preparare i pasti in totale autonomia: lavastoviglie, piano cottura, forno, frigorifero, macchina del caffè espresso, climatizzatore, Smart TV e due comodi divani relax.'}
                   </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Policies & Comfort Summary */}
+            <div className="pt-10 sm:pt-14 border-t border-[#dfd4c4]">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#e5dac9] shadow-xs">
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                  <div>
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#9f3757] font-bold block mb-1">
+                      {isEn ? 'House Rules & Essential Comforts' : 'Regole della Dimora & Comfort Essenziali'}
+                    </span>
+                    <h3 className="font-heading text-xl sm:text-2xl text-[#172e24]">
+                      {isEn ? 'Quietude, comfort & pristine hygiene for every stay' : 'Quiete, comfort e massima igiene per ogni soggiorno'}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#03624c]/10 text-[#03624c] font-medium">
+                      <Check className="w-3.5 h-3.5" />
+                      {isEn ? '4 Sleeps (2 Double Rooms)' : '4 Posti Letto (2 Matrimoniali)'}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#03624c]/10 text-[#03624c] font-medium">
+                      <Check className="w-3.5 h-3.5" />
+                      {isEn ? '2 Free Parking Spots' : '2 Posti Auto Gratuiti'}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#03624c]/10 text-[#03624c] font-medium">
+                      <Check className="w-3.5 h-3.5" />
+                      {isEn ? 'Underfloor Heating & Dishwasher' : 'Riscaldamento a Pavimento & Lavastoviglie'}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#9f3757]/10 text-[#9f3757] font-semibold border border-[#9f3757]/20">
+                      <Ban className="w-3.5 h-3.5" />
+                      {isEn ? 'Pets Not Allowed' : 'Animali Non Ammessi'}
+                    </span>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-[#f0eae0] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-[#736a5f] font-sans">
+                  <p>
+                    {isEn
+                      ? '• Pets: To preserve strict allergy-free spaces, cleanliness, and absolute tranquility, pets are not allowed inside the property.'
+                      : '• Animali domestici: Per garantire la massima pulizia, un ambiente anallergico e la totale quiete di tutti i nostri ospiti, non sono ammessi animali domestici.'}
+                  </p>
+                  <span className="text-[11px] text-[#9a9083] shrink-0 font-medium">
+                    {isEn ? 'Non-smoking indoor areas' : 'Ambienti interni non fumatori'}
+                  </span>
                 </div>
               </div>
             </div>

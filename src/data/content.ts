@@ -403,6 +403,11 @@ export const content: Record<'it' | 'en', ContentData> = {
           desc: "Massima libertà di orari e privacy totale per la tua famiglia.",
           icon: "Key",
         },
+        {
+          title: "Animali Non Ammessi",
+          desc: "Per preservare un ambiente igienico, anallergico e la massima quiete per tutti gli ospiti.",
+          icon: "Ban",
+        },
       ],
     },
     gallery: {
@@ -789,6 +794,11 @@ export const content: Record<'it' | 'en', ContentData> = {
           title: "Private Entrance",
           desc: "Complete privacy and autonomous check-in flexibility.",
           icon: "Key",
+        },
+        {
+          title: "Pets Not Allowed",
+          desc: "To preserve strict hygiene, an allergy-free atmosphere, and absolute serenity for all guests.",
+          icon: "Ban",
         },
       ],
     },

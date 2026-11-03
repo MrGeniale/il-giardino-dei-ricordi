@@ -173,6 +173,23 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
             </label>
           </div>
 
+          {/* Policy Animali non ammessi */}
+          <div className="p-3 rounded-2xl bg-[#f4eee3] border border-[#e5dac9] flex items-center gap-2.5">
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#9f3757]/10 text-[#9f3757] font-bold text-xs shrink-0">
+              ✕
+            </span>
+            <div className="text-[11px] sm:text-xs leading-tight">
+              <span className="font-semibold text-[#1e3329] block">
+                {isEn ? 'House Policy: Pets not allowed' : 'Regola della Dimora: Animali non ammessi'}
+              </span>
+              <span className="text-[#6d6459]">
+                {isEn
+                  ? 'To preserve allergy-free spaces and absolute quiet, pets are not permitted.'
+                  : 'Per garantire igiene, quiete e un ambiente anallergico, non sono ammessi animali domestici.'}
+              </span>
+            </div>
+          </div>
+
           {/* Contact Details */}
           <div className="grid grid-cols-2 gap-3">
             <div>
