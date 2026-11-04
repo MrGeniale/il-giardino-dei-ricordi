@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://il-giardino-dei-ricordi.vercel.app/sitemap.xml
+Sitemap: https://www.ilgiardinodeiricordi.eu/sitemap.xml
